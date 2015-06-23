@@ -1,0 +1,10 @@
+@mixin padding-margin($padding: 0, $margin: 0) {
+    padding:$padding;
+    margin:$margin;
+}
+
+@mixin bg-img($path) {
+    background:url($path) 0 0 no-repeat;
+    width: image-width($path);
+    height: image-height($path);
+}

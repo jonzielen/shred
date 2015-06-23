@@ -1,3 +1,5 @@
+@import "compass/css3";
+@import "mixins";
 @import "normalize";
 
 /* HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
@@ -96,7 +98,11 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+/* SASS VARIABLES */
 $font-path:'../fonts/';
+$h2-font-size: 2.3; // 28pt
+$h3-font-size: 1.7; // 21pt
 
 @font-face {
    font-family: 'san_francisco_displayblack';
@@ -199,6 +205,77 @@ $font-path:'../fonts/';
 }
 
 
+
+
+
+/* TEST CODE TAKE THIS OUT */
+// body {
+//     background:url(../img/BG-EDIT.jpg) no-repeat center top;
+//     height: image-height('../img/BG-EDIT.jpg');
+//
+//     * {
+//         opacity:.8;
+//     }
+// }
+/* TEST CODE TAKE THIS OUT */
+
+
+
+body {
+    background-color:#282828;
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+.img-responsive {
+    display:block;
+    max-width:100%;
+    height:auto;
+}
+
+
+#header {
+
+    h1 {
+        @include bg-img('../img/logo_shred_desktop.png');
+        @include padding-margin(0,0 auto);
+        text-indent:-99999px;
+    }
+    h2 {
+        @include padding-margin(0,0);
+        color:#fff;
+        font-family:'san_francisco_displaybold';
+        font-size:$h2-font-size+em;
+        font-weight:normal;
+        @include text-shadow(0 0 .75em rgba(0, 0, 0, 1));
+        letter-spacing:1.8px;
+    }
+    .links {
+        a {
+            text-indent:-99999px;
+            outline:none;
+        }
+
+        .app-store-link {
+            @include bg-img('../img/badge_appstore_desktop.png');
+        }
+        .mac-app-store-link {
+            @include bg-img('../img/badge_macstore_desktop.png');
+        }
+    }
+}
+#collage {
+
+
+}
+#how-to {
+
+
+}
+#about-us {
+
+
+}
 
 
 
