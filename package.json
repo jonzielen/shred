@@ -1,0 +1,33 @@
+{
+  "name": "shred",
+  "version": "0.0.1",
+  "description": "shred site",
+  "main": "index.html",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-compass": "^1.0.3",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonzielen/shred.git"
+  },
+  "keywords": [
+    "shred",
+    "html5",
+    "grunt.",
+    "compass"
+  ],
+  "author": "Jon Z.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonzielen/shred/issues"
+  },
+  "homepage": "https://github.com/jonzielen/shred"
+}
