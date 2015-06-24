@@ -205,23 +205,6 @@ $h3-font-size: 1.7; // 21pt
     font-style: normal;
 }
 
-
-
-
-
-/* TEST CODE TAKE THIS OUT */
-// body {
-//     background:url(../img/BG-EDIT.jpg) no-repeat center top;
-//     height: image-height('../img/BG-EDIT.jpg');
-//
-//     * {
-//         opacity:.8;
-//     }
-// }
-/* TEST CODE TAKE THIS OUT */
-
-
-
 body {
     background-color:#282828;
     padding:0;
@@ -239,11 +222,10 @@ body {
 }
 
 #header {
-    @include background-size(cover);
+    @include bg-img-full('../img/bg_header.jpg');
 
     h1 {
         @include bg-img('../img/logo_shred_desktop.png');
-        @include padding-margin(0,0 auto);
         text-indent:-99999px;
     }
     h2 {
@@ -257,31 +239,26 @@ body {
     }
     .links {
         a {
-            text-indent:-99999px;
             outline:none;
+            display:inline-block;
         }
 
         .app-store-link {
-            @include bg-img('../img/badge_appstore_desktop.png');
+
         }
         .mac-app-store-link {
-            @include bg-img('../img/badge_macstore_desktop.png');
+
         }
     }
 }
 #collage {
-    background:url(../img/bg_collage_desktop.jpg) 0 0 no-repeat;
-    @include background-size(cover);
-	padding:0;
+    @include bg-img-full('../img/bg_collage_desktop.jpg');
 }
 #how-to {
 
-
 }
 #about-us {
-    background:url(../img/bg_aboutus_desktop.jpg) 0 0 no-repeat;
-    @include background-size(cover);
-	padding:0;
+    @include bg-img-full('../img/bg_aboutus_desktop.jpg');
 }
 
 

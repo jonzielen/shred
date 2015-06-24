@@ -7,4 +7,11 @@
     background:url($path) 0 0 no-repeat;
     width: image-width($path);
     height: image-height($path);
+    @include padding-margin(0,0 auto);
+}
+
+@mixin bg-img-full($path) {
+    background:url($path) 0 0 no-repeat;
+    @include background-size(cover);
+    @include padding-margin(0,0);
 }
