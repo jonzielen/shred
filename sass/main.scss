@@ -1,6 +1,7 @@
 @import "compass/css3";
 @import "mixins";
 @import "normalize";
+@import "jquery.fullPage";
 
 /* HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
 
@@ -232,9 +233,13 @@ body {
     max-width:100%;
     height:auto;
 }
-
+.section {
+    @include background-size(cover);
+    text-align:center;
+}
 
 #header {
+    @include background-size(cover);
 
     h1 {
         @include bg-img('../img/logo_shred_desktop.png');
@@ -265,16 +270,18 @@ body {
     }
 }
 #collage {
-
-
+    background:url(../img/bg_collage_desktop.jpg) 0 0 no-repeat;
+    @include background-size(cover);
+	padding:0;
 }
 #how-to {
 
 
 }
 #about-us {
-
-
+    background:url(../img/bg_aboutus_desktop.jpg) 0 0 no-repeat;
+    @include background-size(cover);
+	padding:0;
 }
 
 
