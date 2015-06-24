@@ -238,21 +238,26 @@ body {
         letter-spacing:1.8px;
     }
     .links {
+        max-width:400px;
+        @include padding-margin(0,0 auto);
         a {
             outline:none;
             display:inline-block;
         }
 
         .app-store-link {
-
+            float:left;
         }
         .mac-app-store-link {
-
+            float:right;
         }
     }
 }
 #collage {
     @include bg-img-full('../img/bg_collage_desktop.jpg');
+    .box {
+        @include bg-img('../img/letterbox_desktop.jpg');
+    }
 }
 #how-to {
 
