@@ -1,3 +1,15 @@
+@mixin fontFace($familyName, $fontFileName) {
+   font-family: $familyName;
+   src: url($font-path + $fontFileName + '.eot');
+   src: url($font-path + $fontFileName +'.eot?#iefix') format('embedded-opentype'),
+        url($font-path + $fontFileName +'.woff2') format('woff2'),
+        url($font-path + $fontFileName +'.woff') format('woff'),
+        url($font-path + $fontFileName +'.ttf') format('truetype'),
+        url($font-path + $fontFileName +'.svg#' + $familyName) format('svg');
+   font-weight:normal;
+   font-style:normal;
+
+}
 @mixin padding-margin($padding: 0, $margin: 0) {
     padding:$padding;
     margin:$margin;
