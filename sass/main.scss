@@ -102,8 +102,9 @@ textarea {
 
 /* SASS VARIABLES */
 $font-path:'../fonts/';
-$h2-font-size: 2.3; // 28pt
+$h2-font-size: 1.7; // 28pt
 $h3-font-size: 1.7; // 21pt
+$p-font-size:0.8;
 
 @font-face {
     @include fontFace('san_francisco_displayblack', 'sanfranciscodisplay-black-webfont');
@@ -133,6 +134,29 @@ $h3-font-size: 1.7; // 21pt
     @include fontFace('san_francisco_displayultraLt', 'sanfranciscodisplay-ultralight-webfont');
 }
 
+h1,h2,h3,h4,h5,h6,p {
+  @include padding-margin(0,0);
+  font-weight:normal;
+  font-style:normal;
+}
+
+
+/* TEST CODE REMOVE */
+// body {
+//   background:url(../img/BG-EDIT.jpg) center top no-repeat;
+//   //@include background-size(cover);
+//   //width:1024px;
+//
+//   * {
+//     opacity: .8;
+//   }
+//   .wrapper {
+//     width:1024px;
+//     margin:0 auto;
+//   }
+// }
+/* TEST CODE REMOVE */
+
 body {
     background-color:#282828;
     padding:0;
@@ -151,23 +175,28 @@ body {
 
 #header {
     @include bg-img-full('../img/bg_header.jpg');
+    .fp-tableCell {
+      vertical-align: top;
+      @include padding-margin(11% 0 0 0,0);
+    }
 
     h1 {
         @include bg-img('../img/logo_shred_desktop.png');
         text-indent:-99999px;
+        @include padding-margin(0,0 auto);
     }
     h2 {
-        @include padding-margin(0,0);
+        @include padding-margin(7% 0 0 0,0);
         color:#fff;
         font-family:'san_francisco_displaybold';
         font-size:$h2-font-size+em;
-        font-weight:normal;
         @include text-shadow(0 0 .75em rgba(0, 0, 0, 1));
-        letter-spacing:1.8px;
+        letter-spacing:5px;
+        text-transform:uppercase;
     }
     .links {
-        max-width:400px;
-        @include padding-margin(0,0 auto);
+        max-width:345px;
+        @include padding-margin(2% 0 0 0,0 auto);
         a {
             outline:none;
             display:inline-block;
@@ -178,6 +207,7 @@ body {
         }
         .mac-app-store-link {
             float:right;
+            margin:0 -12px 0 0;
         }
     }
 }
@@ -185,6 +215,18 @@ body {
     @include bg-img-full('../img/bg_collage_desktop.jpg');
     .box {
         @include bg-img('../img/letterbox_desktop.jpg');
+        h2 {
+          font-family:'san_francisco_displaybold';
+          text-transform:uppercase;
+          font-size:$h2-font-size+em;
+          letter-spacing:5.6px;
+          @include padding-margin(6% 0 3% 0,0);
+        }
+        p {
+          font-family:'san_francisco_displaymedium';
+          color:#282829;
+          font-size:$p-font-size+em;
+        }
     }
 }
 #how-to {
