@@ -108,16 +108,7 @@ $h4-font-size: 0.8em; // 13 pt
 $p-font-size: 0.8em; // 13 pt
 
 @font-face {
-    @include fontFace('san_francisco_displayblack', 'sanfranciscodisplay-black-webfont');
-}
-@font-face {
     @include fontFace('san_francisco_displaybold', 'sanfranciscodisplay-bold-webfont');
-}
-@font-face {
-    @include fontFace('san_francisco_displayheavy', 'sanfranciscodisplay-heavy-webfont');
-}
-@font-face {
-    @include fontFace('san_francisco_displaylight', 'sanfranciscodisplay-light-webfont');
 }
 @font-face {
     @include fontFace('san_francisco_displaymedium', 'sanfranciscodisplay-medium-webfont');
@@ -125,38 +116,45 @@ $p-font-size: 0.8em; // 13 pt
 @font-face {
     @include fontFace('san_francisco_displayregular', 'sanfranciscodisplay-regular-webfont');
 }
-@font-face {
-    @include fontFace('san_francisco_displaysemibold', 'sanfranciscodisplay-semibold-webfont');
-}
-@font-face {
-    @include fontFace('san_francisco_displaythin', 'sanfranciscodisplay-thin-webfont');
-}
-@font-face {
-    @include fontFace('san_francisco_displayultraLt', 'sanfranciscodisplay-ultralight-webfont');
-}
-
+/******* COMMENT THESE IN AS NEEDED - FILES ALREADY IN THE FONTS FOLDER *******/
+// @font-face {
+//     @include fontFace('san_francisco_displayblack', 'sanfranciscodisplay-black-webfont');
+// }
+// @font-face {
+//     @include fontFace('san_francisco_displayheavy', 'sanfranciscodisplay-heavy-webfont');
+// }
+// @font-face {
+//     @include fontFace('san_francisco_displaylight', 'sanfranciscodisplay-light-webfont');
+// }
+// @font-face {
+//     @include fontFace('san_francisco_displaysemibold', 'sanfranciscodisplay-semibold-webfont');
+// }
+// @font-face {
+//     @include fontFace('san_francisco_displaythin', 'sanfranciscodisplay-thin-webfont');
+// }
+// @font-face {
+//     @include fontFace('san_francisco_displayultraLt', 'sanfranciscodisplay-ultralight-webfont');
+// }
 h1,h2,h3,h4,h5,h6,p {
   @include padding-margin(0,0);
   font-weight:normal;
   font-style:normal;
 }
-
-
 /* TEST CODE REMOVE */
-body {
-  background:url(../img/BG-EDIT.jpg) center top no-repeat;
-  //@include background-size(cover);
-  //width:1024px;
-  opacity: .8;
-
-  // * {
-  //
-  // }
-  .wrapper {
-    width:1024px;
-    margin:0 auto;
-  }
-}
+// body {
+//   background:url(../img/BG-EDIT.jpg) center top no-repeat;
+//   //@include background-size(cover);
+//   //width:1024px;
+//   opacity: .8;
+//
+//   // * {
+//   //
+//   // }
+//   .wrapper {
+//     width:1024px;
+//     margin:0 auto;
+//   }
+// }
 /* TEST CODE REMOVE */
 
 body {
@@ -164,6 +162,7 @@ body {
     padding:0;
     margin:0;
     text-align:center;
+    font-family:'san_francisco_displayregular';
 }
 .img-responsive {
     display:block;
@@ -174,14 +173,12 @@ body {
     @include background-size(cover);
     text-align:center;
 }
-
 #header {
     @include bg-img-full('../img/bg_header.jpg');
     .fp-tableCell {
       vertical-align: top;
       @include padding-margin(11% 0 0 0,0);
     }
-
     h1 {
         @include bg-img('../img/logo_shred_desktop.png');
         text-indent:-99999px;
@@ -234,7 +231,6 @@ body {
   .how-to-inner {
     max-width:550px;
     @include padding-margin(0,0 auto);
-
     figure {
       @include padding-margin(8% 0 0 0,0);
       text-align:left;
@@ -244,17 +240,16 @@ body {
         display: inline-block;
         @include padding-margin(0,0 4% 0 15%);
       }
-
       figcaption {
         float:left;
         display: inline-block;
         width:62%;
-
         h3 {
           font-family:'san_francisco_displaybold';
           color:#fff;
           font-size:$h3-font-size;
           letter-spacing:0.1em;
+          text-transform:uppercase;
         }
         h4 {
           color:#fff;
@@ -272,6 +267,62 @@ body {
 }
 #about-us {
     @include bg-img-full('../img/bg_aboutus_desktop.jpg');
+    .fp-tableCell {
+      vertical-align:top;
+    }
+    .about-us-inner {
+      @include padding-margin(6% 0 0 0,0 auto);
+      max-width:340px;
+      height:100%;
+      h2 {
+        text-transform:uppercase;
+        color:#282828;
+        font-size:$h2-font-size;
+        font-family:'san_francisco_displaybold';
+        letter-spacing:0.2em;
+        @include padding-margin(0 0 4% 0,0);
+      }
+      p {
+        font-size:$p-font-size;
+        font-family:'san_francisco_displaymedium';
+        color:#282828;
+        line-height:normal;
+        a {
+          font-family:'san_francisco_displaybold';
+          color:#282828;
+          text-decoration:underline;
+          &:hover {
+            text-decoration:none;
+          }
+        }
+      }
+      .lower {
+        @include padding-margin(5% 0 0 0,0);
+      }
+    }
+    .copyright {
+      position:relative;
+      display:block;
+      .cw-inner {
+        position:absolute;
+        bottom:0;
+        display:block;
+        background-color:rgba(0, 0, 0, 0.7);
+        width:100%;
+        @include padding-margin(2% 0,0);
+      }
+      p {
+        font-size:$p-font-size;
+        font-family:'san_francisco_displaymedium';
+        color:#fff;
+        line-height:normal;
+      }
+      .img-responsive {
+        position:absolute;
+        right:2%;
+        top:36%;
+      }
+    }
 }
 
 
