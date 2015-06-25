@@ -315,21 +315,61 @@ body {
             @include padding-margin(10% 0 0 0,0 auto);
         }
         h2 {
-            width:90%;
+            width:80%;
             @include padding-margin(0 0 24% 0,0 auto);
         }
         .links {
             .app-store-link {
                 float:none;
-                @include padding-margin(0,0 0 4% 0);
+                @include padding-margin(0,0 auto 4%);
+                display: block;
+                width:image-width('../img/badge_appstore_desktop.png');
             }
             .mac-app-store-link {
                 float:none;
-                @include padding-margin(0,0);
+                @include padding-margin(0,0 auto);
+                display: block;
+                width:image-width('../img/badge_macstore_desktop.png');
             }
         }
     }
+    #collage {
+        .box {
+            background:url('../img/letterbox_mobile.jpg') 0 0 no-repeat;
+            width:image-width('../img/letterbox_mobile.jpg')-20px;
+            height:image-height('../img/letterbox_mobile.jpg')-20px;
+            padding:10px;
+            p {
+                display:inline;
+            }
+        }
+    }
+    #how-to {
+        .how-to-inner {
+            figure {
+                text-align:center;
 
+                img {
+                    float:none;
+                    display: block;
+                    @include padding-margin(0,0 auto 2%);
+                }
+                figcaption {
+                    float:none;
+                }
+            }
+        }
+    }
+    #about-us {
+        .copyright {
+            .cw-inner {
+                .img-responsive {
+                    @include padding-margin(0 0 2%,0 auto);
+                    position: static;
+                }
+            }
+        }
+    }
 
 
 }
