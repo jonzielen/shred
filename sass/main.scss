@@ -140,23 +140,6 @@ h1,h2,h3,h4,h5,h6,p {
   font-weight:normal;
   font-style:normal;
 }
-/* TEST CODE REMOVE */
-// body {
-//   background:url(../img/BG-EDIT.jpg) center top no-repeat;
-//   //@include background-size(cover);
-//   //width:1024px;
-//   opacity: .8;
-//
-//   // * {
-//   //
-//   // }
-//   .wrapper {
-//     width:1024px;
-//     margin:0 auto;
-//   }
-// }
-/* TEST CODE REMOVE */
-
 body {
     background-color:#282828;
     padding:0;
@@ -325,15 +308,31 @@ body {
     }
 }
 
+@media (max-width: 767px) {
+    #header {
+        @include padding-margin(15% 0 0 0,0);
+        h1 {
+            @include padding-margin(10% 0 0 0,0 auto);
+        }
+        h2 {
+            width:90%;
+            @include padding-margin(0 0 24% 0,0 auto);
+        }
+        .links {
+            .app-store-link {
+                float:none;
+                @include padding-margin(0,0 0 4% 0);
+            }
+            .mac-app-store-link {
+                float:none;
+                @include padding-margin(0,0);
+            }
+        }
+    }
 
 
 
-
-
-
-
-
-
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
