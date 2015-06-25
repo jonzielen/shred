@@ -103,8 +103,9 @@ textarea {
 /* SASS VARIABLES */
 $font-path:'../fonts/';
 $h2-font-size: 1.7; // 28pt
-$h3-font-size: 1.7; // 21pt
-$p-font-size:0.8;
+$h3-font-size: 1.4; // 21pt
+$h4-font-size: 0.8; // 13 pt
+$p-font-size: 0.8;
 
 @font-face {
     @include fontFace('san_francisco_displayblack', 'sanfranciscodisplay-black-webfont');
@@ -146,10 +147,11 @@ h1,h2,h3,h4,h5,h6,p {
 //   background:url(../img/BG-EDIT.jpg) center top no-repeat;
 //   //@include background-size(cover);
 //   //width:1024px;
+//   opacity: .8;
 //
-//   * {
-//     opacity: .8;
-//   }
+//   // * {
+//   //
+//   // }
 //   .wrapper {
 //     width:1024px;
 //     margin:0 auto;
@@ -230,7 +232,41 @@ body {
     }
 }
 #how-to {
+  .how-to-inner {
+    max-width:550px;
+    @include padding-margin(8% 0 0 0,0 auto);
 
+    figure {
+      @include padding-margin(8% 0 0 0,0);
+      text-align:left;
+
+      img {
+        float:left;
+        display: inline-block;
+        @include padding-margin(0,0 4% 0 15%);
+      }
+
+      figcaption {
+        float:left;
+        display: inline-block;
+        width:40%;
+
+        h3 {
+          font-family:'san_francisco_displaybold';
+          color:#fff;
+          font-size:$h3-font-size;
+          letter-spacing:0.1em;
+        }
+        h4 {
+          color:#fff;
+          font-size:$h4-font-size;
+        }
+        p {
+          color:#949494;
+        }
+      }
+    }
+  }
 }
 #about-us {
     @include bg-img-full('../img/bg_aboutus_desktop.jpg');
