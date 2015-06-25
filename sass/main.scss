@@ -102,10 +102,10 @@ textarea {
 
 /* SASS VARIABLES */
 $font-path:'../fonts/';
-$h2-font-size: 1.7; // 28pt
-$h3-font-size: 1.4; // 21pt
-$h4-font-size: 0.8; // 13 pt
-$p-font-size: 0.8;
+$h2-font-size: 1.7em; // 28pt
+$h3-font-size: 1.4em; // 21pt
+$h4-font-size: 0.8em; // 13 pt
+$p-font-size: 0.8em; // 13 pt
 
 @font-face {
     @include fontFace('san_francisco_displayblack', 'sanfranciscodisplay-black-webfont');
@@ -143,20 +143,20 @@ h1,h2,h3,h4,h5,h6,p {
 
 
 /* TEST CODE REMOVE */
-// body {
-//   background:url(../img/BG-EDIT.jpg) center top no-repeat;
-//   //@include background-size(cover);
-//   //width:1024px;
-//   opacity: .8;
-//
-//   // * {
-//   //
-//   // }
-//   .wrapper {
-//     width:1024px;
-//     margin:0 auto;
-//   }
-// }
+body {
+  background:url(../img/BG-EDIT.jpg) center top no-repeat;
+  //@include background-size(cover);
+  //width:1024px;
+  opacity: .8;
+
+  // * {
+  //
+  // }
+  .wrapper {
+    width:1024px;
+    margin:0 auto;
+  }
+}
 /* TEST CODE REMOVE */
 
 body {
@@ -191,7 +191,7 @@ body {
         @include padding-margin(7% 0 0 0,0);
         color:#fff;
         font-family:'san_francisco_displaybold';
-        font-size:$h2-font-size+em;
+        font-size:$h2-font-size;
         @include text-shadow(0 0 .75em rgba(0, 0, 0, 1));
         letter-spacing:5px;
         text-transform:uppercase;
@@ -203,7 +203,6 @@ body {
             outline:none;
             display:inline-block;
         }
-
         .app-store-link {
             float:left;
         }
@@ -220,21 +219,21 @@ body {
         h2 {
           font-family:'san_francisco_displaybold';
           text-transform:uppercase;
-          font-size:$h2-font-size+em;
+          font-size:$h2-font-size;
           letter-spacing:5.6px;
           @include padding-margin(6% 0 3% 0,0);
         }
         p {
           font-family:'san_francisco_displaymedium';
           color:#282829;
-          font-size:$p-font-size+em;
+          font-size:$p-font-size;
         }
     }
 }
 #how-to {
   .how-to-inner {
     max-width:550px;
-    @include padding-margin(8% 0 0 0,0 auto);
+    @include padding-margin(0,0 auto);
 
     figure {
       @include padding-margin(8% 0 0 0,0);
@@ -249,7 +248,7 @@ body {
       figcaption {
         float:left;
         display: inline-block;
-        width:40%;
+        width:62%;
 
         h3 {
           font-family:'san_francisco_displaybold';
@@ -260,9 +259,12 @@ body {
         h4 {
           color:#fff;
           font-size:$h4-font-size;
+          @include padding-margin(0,0 0 1% 0);
         }
         p {
           color:#949494;
+          font-size:$p-font-size;
+          line-height:normal;
         }
       }
     }
