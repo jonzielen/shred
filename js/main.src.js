@@ -1,8 +1,4 @@
 $(function() {
-  document.createElement('video');document.createElement('audio');document.createElement('track');
-
-  // Set this path appropriately for your web host
-  videojs.options.flash.swf = "http://shredvideo.com/flash/video-js.swf";
   var isMobile = false; //initiate as false
 
   // device detection
