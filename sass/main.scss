@@ -382,16 +382,14 @@ body {
                 width:image-width('../img/badge_appstore_desktop.png');
             }
             .mac-app-store-link {
-                float:none;
-                @include padding-margin(0,0 auto);
-                display: block;
-                width:image-width('../img/badge_macstore_desktop.png');
+                display:none;
+                height:0;
             }
         }
         .arrow {
           a {
             img {
-              top:120%;
+              top:130%;
             }
           }
         }
