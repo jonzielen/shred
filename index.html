@@ -20,6 +20,11 @@
 
         <div id="fullpage">
         	<section id="header" class="section">
+                <div class="fullscreen-bg">
+                  <video id="bk-video" class="bk-video" preload="auto" loop="loop" muted="muted" volume="0">
+                    <source src="video/web_backroll_D1_540_2.mp4" type="video/mp4">
+                  </video>
+                </div>
                 <h1>Shred Video</h1>
                 <h2>set your footage free</h2>
                 <div class="links clearfix">
@@ -31,8 +36,7 @@
                     </a>
                 </div>
                 <div class="arrow">
-                  <a href="#slide2"><img src="img/arrow_down.png" alt="arrow" class="img-responsive"></a>
-
+                  <a href="#"><img src="img/arrow_down.png" alt="arrow" class="img-responsive"></a>
                 </div>
           </section>
 
@@ -100,6 +104,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/plugins.min.js"></script>
+        <script type="text/javascript" src="http://shredvideo.com/js/video.js"></script>
+        <script type="text/javascript">
+          document.createElement('video');document.createElement('audio');document.createElement('track');
+        </script>
         <script src="js/main.min.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
