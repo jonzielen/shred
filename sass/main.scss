@@ -106,6 +106,7 @@ $h2-font-size: 1.7em; // 28pt
 $h3-font-size: 1.4em; // 21pt
 $h4-font-size: 1em; // 16 pt
 $p-font-size: 1em; // 16 pt
+$small-font-size: .8em; // 13pt
 
 @font-face {
     @include fontFace('san_francisco_displaybold', 'sanfranciscodisplay-bold-webfont');
@@ -413,6 +414,7 @@ body {
                 }
                 p {
                   @include padding-margin(0 2%,0);
+                  font-size:$small-font-size;
                 }
             }
         }
