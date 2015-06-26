@@ -191,6 +191,10 @@ body {
             margin:0 -12px 0 0;
         }
     }
+    .arrow {
+      @include padding-margin(3% 0 0 0,0 auto);
+      width:image-width('../img/arrow_down.png');
+    }
 }
 #collage {
     @include bg-img-full('../img/bg_collage_desktop.jpg');
