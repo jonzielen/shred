@@ -104,8 +104,8 @@ textarea {
 $font-path:'../fonts/';
 $h2-font-size: 1.7em; // 28pt
 $h3-font-size: 1.4em; // 21pt
-$h4-font-size: 0.8em; // 13 pt
-$p-font-size: 0.8em; // 13 pt
+$h4-font-size: 1em; // 16 pt
+$p-font-size: 1em; // 16 pt
 
 @font-face {
     @include fontFace('san_francisco_displaybold', 'sanfranciscodisplay-bold-webfont');
