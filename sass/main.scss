@@ -366,6 +366,9 @@ body {
         }
     }
     #about-us {
+      .about-us-inner {
+        @include padding-margin(6% 6% 0 6%,0 auto);
+      }
         .copyright {
             .cw-inner {
                 .img-responsive {
@@ -375,8 +378,6 @@ body {
             }
         }
     }
-
-
 }
 /* ==========================================================================
    Helper classes
