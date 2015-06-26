@@ -310,13 +310,18 @@ body {
 
 @media (max-width: 767px) {
     #header {
-        @include padding-margin(15% 0 0 0,0);
+        @include padding-margin(0,0);
+
+        .fp-tableCell {
+          @include padding-margin(0,0);
+          vertical-align:middle;
+        }
         h1 {
-            @include padding-margin(10% 0 0 0,0 auto);
+            @include padding-margin(0,0 auto);
         }
         h2 {
             width:80%;
-            @include padding-margin(0 0 24% 0,0 auto);
+            @include padding-margin(0 0 15% 0,0 auto);
         }
         .links {
             .app-store-link {
