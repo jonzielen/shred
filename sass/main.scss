@@ -408,7 +408,16 @@ body {
     }
     #about-us {
       .about-us-inner {
-        @include padding-margin(6% 6% 0 6%,0 auto);
+        @include padding-margin(6% 0 0 0,0 auto);
+        h2 {
+          @include padding-margin(0 6% 2%,0);
+        }
+        p {
+          @include padding-margin(0 6%,0);
+        }
+        .lower {
+          @include padding-margin(4% 0 0 0,0);
+        }
       }
         .copyright {
             .cw-inner {
