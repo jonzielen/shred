@@ -351,6 +351,7 @@ body {
     }
     #how-to {
         .how-to-inner {
+          @include padding-margin(6% 0 15% 0,0);
             figure {
                 text-align:center;
 

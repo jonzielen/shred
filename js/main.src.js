@@ -1,3 +1,5 @@
 $(function() {
-    $('#fullpage').fullpage();
+    $('#fullpage').fullpage({
+      scrollOverflow: true
+    });
 });
