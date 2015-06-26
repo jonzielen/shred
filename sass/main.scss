@@ -351,7 +351,7 @@ body {
     }
     #how-to {
         .how-to-inner {
-          @include padding-margin(6% 0 15% 0,0);
+          @include padding-margin(6% 0 18% 0,0);
             figure {
                 text-align:center;
 
@@ -375,6 +375,9 @@ body {
                 .img-responsive {
                     @include padding-margin(0 0 2%,0 auto);
                     position: static;
+                }
+                p {
+                  @include padding-margin(0 2%,0);
                 }
             }
         }
