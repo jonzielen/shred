@@ -179,21 +179,19 @@ body {
         top: -100%;
       }
     }
-
     @media (max-aspect-ratio: 16/9) {
       .fullscreen-bg .bk-video {
         width: 300%;
         left: -100%;
       }
     }
-
     @media (max-width: 767px) {
       .fullscreen-bg {
         @include bg-img-full('../img/bg_header.jpg');
       }
 
       .fullscreen-bg .bk-video {
-        display: none;
+        display:none;
       }
     }
     h1 {
