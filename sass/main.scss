@@ -151,9 +151,6 @@ body {
     @include background-size(cover);
     text-align: center;
 }
-.mobile-only {
-    display: none !important;
-}
 #header {
     position: relative;
     .fullscreen-bg {
@@ -216,14 +213,12 @@ body {
             outline: none;
             display: inline-block;
         }
-
         // .app-store-link {
         //     float:left;
         // }
-        // .mac-app-store-link {
-        //     float:right;
-        //     margin:0 -12px 0 0;
-        // }
+        .mac-app-store-link {
+            display: none;
+        }
     }
     .arrow {
         @include padding-margin(0 0 0 0,0 auto);
@@ -268,17 +263,19 @@ body {
             padding: 0 0 2%;
             h4 {
                 @include padding-margin(2% 0 8%,0);
+                letter-spacing:0.5px;
             }
             input {
                 display: block;
-                @include padding-margin(8px 0,0 auto 14px);
+                @include padding-margin(13px 0,0 auto 14px);
                 border: 2px solid #696969;
                 background-color: #272727;
                 width: 246px;
                 text-align: center;
-                font-size: $small-font-size;
+                font-size:$p-font-size;
                 color: #fff;
                 outline: none;
+                @include border-radius(0);
             }
             input[type="email"] {
                 @include input-placeholder {
@@ -290,7 +287,7 @@ body {
             }
             button {
                 display: block;
-                @include padding-margin(8px 0,0 auto);
+                @include padding-margin(11px 0,0 auto);
                 background-color: #181818;
                 color: #fff;
                 width: 250px;
@@ -298,9 +295,10 @@ body {
                 text-transform: uppercase;
                 font-family: 'san_francisco_displaybold';
                 outline: none;
-                &:hover {
-                    background-color: #b6072e;
-                }
+                letter-spacing:0.6px;
+            }
+            .disabled {
+                background-color: #b6072e;
             }
         }
         figure {
@@ -425,15 +423,13 @@ body {
         }
         .links {
             .app-store-link {
-
-                //float:none;
-                @include padding-margin(0,0 auto 4%);
-                display: block;
-                width: image-width('../img/badge_appstore_desktop.png');
-            }
-            .mac-app-store-link {
                 display: none;
                 height: 0;
+            }
+            .mac-app-store-link {
+                @include padding-margin(0,0 auto 4%);
+                display: block;
+                width: image-width('../img/badge_macstore_desktop.png');
             }
         }
         .arrow {

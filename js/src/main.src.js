@@ -65,12 +65,15 @@ $(function() {
             data: info
         }).done(function(data,url) {
             alert('Thank you!');
-            //$('.email-sign-up #submit').addClass('disabled');
+            $('.email-sign-up #submit').addClass('disabled');
         });
     };
 
     $('.email-sign-up').on('click', '#submit', function(e) {
-        formCheck();
-        e.preventDefault();
+        if ( !$(this).hasClass('disabled') ) {
+            formCheck();
+            e.preventDefault();
+            console.log('added');
+        };
     });
 });
