@@ -63,8 +63,7 @@ $(function() {
             type: "post",
             //url: '//'+window.location.hostname+'/dbUpdate.php',
             data: info
-        }).done(function(data,url) {
-            alert('Thank you!');
+        }).done(function() {
             $('.email-sign-up #submit').addClass('disabled');
         });
     };
