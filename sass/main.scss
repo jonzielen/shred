@@ -211,7 +211,7 @@ body {
         text-transform:uppercase;
     }
     .links {
-        max-width:345px;
+        max-width:385px;
         @include padding-margin(2% 0 0 0,0 auto);
         a {
             outline:none;
@@ -228,14 +228,16 @@ body {
     .arrow {
       @include padding-margin(3% 0 0 0,0 auto);
       width:image-width('../img/arrow_down.png');
-      a {
+      .arrow-inner {
         position: relative;
         width:image-width('../img/arrow_down.png');
         height:image-height('../img/arrow_down.png');
         display:block;
-        img {
+        a {
           position: absolute;
           top:300%;
+          width:image-width('../img/arrow_down.png');
+          height:image-height('../img/arrow_down.png');
         }
       }
     }
@@ -262,6 +264,36 @@ body {
   .how-to-inner {
     max-width:550px;
     @include padding-margin(0,0 auto);
+    .email-sign-up {
+        input {
+            display:block;
+            @include padding-margin(8px 0,0 auto 14px);
+            border:2px solid #696969;
+            background-color:#272727;
+            width:246px;
+            text-align:center;
+            font-size:$small-font-size;
+            color:#fff;
+        }
+        input[type="text"] {
+            @include input-placeholder {
+                color:#696969;
+            }
+        }
+        button {
+            display: block;
+            @include padding-margin(8px 0,0 auto);
+            background-color:#181818;
+            color:#fff;
+            width:250px;
+            border:none;
+            text-transform:uppercase;
+            font-family:'san_francisco_displaybold';
+            &:hover {
+                background-color:#b6072e;
+            }
+        }
+    }
     figure {
       @include padding-margin(8% 0 0 0,0);
       text-align:left;
@@ -275,24 +307,24 @@ body {
         float:left;
         display: inline-block;
         width:62%;
-        h3 {
-          font-family:'san_francisco_displaybold';
-          color:#fff;
-          font-size:$h3-font-size;
-          letter-spacing:0.1em;
-          text-transform:uppercase;
-        }
-        h4 {
-          color:#fff;
-          font-size:$h4-font-size;
-          @include padding-margin(0,0 0 1% 0);
-        }
-        p {
-          color:#949494;
-          font-size:$p-font-size;
-          line-height:normal;
-        }
       }
+    }
+    h3 {
+      font-family:'san_francisco_displaybold';
+      color:#fff;
+      font-size:$h3-font-size;
+      letter-spacing:0.1em;
+      text-transform:uppercase;
+    }
+    h4 {
+      color:#fff;
+      font-size:$h4-font-size;
+      @include padding-margin(0,0 0 1% 0);
+    }
+    p {
+      color:#949494;
+      font-size:$p-font-size;
+      line-height:normal;
     }
   }
 }

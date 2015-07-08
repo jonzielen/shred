@@ -24,9 +24,9 @@ module.exports = function (grunt) {
       all: {
         files: [{
           expand: true,
-          cwd: 'js',
+          cwd: 'js/src',
           src: ['*.src.js', '!*.min.js'],
-          dest: 'js',
+          dest: 'js/min',
           ext: '.min.js'
         }],
       },
@@ -34,7 +34,7 @@ module.exports = function (grunt) {
     watch: {
       scripts: {
         files:[
-          'js/*.src.js'
+          'js/src/*.src.js'
         ],
         tasks:['uglify'],
         options: {
