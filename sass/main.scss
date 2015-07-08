@@ -456,7 +456,8 @@ body {
             @include padding-margin(6% 0 18% 0,0);
             .email-sign-up {
                 h4 {
-                    font-size: $small-font-size;
+                    font-size: $h4-font-size;
+                    letter-spacing: normal;
                 }
             }
             figure {
