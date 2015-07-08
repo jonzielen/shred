@@ -204,8 +204,11 @@ body {
         text-indent:-99999px;
         @include padding-margin(0,0 auto);
     }
+
+    $offset-mid-padding: 14%;
+
     h2 {
-        @include padding-margin(7% 0 0 0,0);
+        @include padding-margin($offset-mid-padding 0 0 0,0);
         color:#fff;
         font-family:'san_francisco_displaybold';
         font-size:$h2-font-size;
@@ -215,7 +218,7 @@ body {
     }
     .links {
         max-width:385px;
-        @include padding-margin(2% 0 0 0,0 auto);
+        @include padding-margin(0 0 $offset-mid-padding 0,0 auto);
         a {
             outline:none;
             display:inline-block;
@@ -229,17 +232,16 @@ body {
         // }
     }
     .arrow {
-      @include padding-margin(3% 0 0 0,0 auto);
-      width:image-width('../img/arrow_down.png');
+      @include padding-margin(0 0 0 0,0 auto);
+      width:100%;
+      position:absolute;
+      bottom:4%;
       .arrow-inner {
-        position: relative;
         width:image-width('../img/arrow_down.png');
         height:image-height('../img/arrow_down.png');
         display:block;
+        margin:0 auto;
         a {
-          position:absolute;
-          top:300%;
-          left:0;
           width:image-width('../img/arrow_down.png');
           height:image-height('../img/arrow_down.png');
         }
@@ -269,6 +271,10 @@ body {
     max-width:550px;
     @include padding-margin(0,0 auto);
     .email-sign-up {
+        padding:0 0 2% 0;
+        h4 {
+            @include padding-margin(2% 0 8%,0);
+        }
         input {
             display:block;
             @include padding-margin(8px 0,0 auto 14px);
@@ -278,11 +284,15 @@ body {
             text-align:center;
             font-size:$small-font-size;
             color:#fff;
+            outline:none;
         }
-        input[type="text"] {
+        input[type="email"] {
             @include input-placeholder {
                 color:#696969;
             }
+        }
+        .error {
+            border:2px solid #b6072e;
         }
         button {
             display: block;
@@ -293,6 +303,7 @@ body {
             border:none;
             text-transform:uppercase;
             font-family:'san_francisco_displaybold';
+            outline:none;
             &:hover {
                 background-color:#b6072e;
             }
@@ -396,10 +407,17 @@ body {
     }
 }
 
+// for large screens
+// @media (min-width: 1200px) {
+//     #header {
+//         h2 {
+//             @include padding-margin(10% 0 0 0,0);
+//         }
+//     }
+// }
+
+// for small screens
 @media (max-width: 767px) {
-    .mobile-only {
-    display:block !important;
-    }
     #header {
         @include padding-margin(0,0);
         .fp-tableCell {
@@ -447,6 +465,12 @@ body {
     #how-to {
         .how-to-inner {
           @include padding-margin(6% 0 18% 0,0);
+
+          .email-sign-up {
+              h4 {
+                  font-size:$small-font-size;
+              }
+          }
             figure {
                 text-align:center;
 

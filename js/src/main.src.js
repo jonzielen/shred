@@ -35,4 +35,42 @@ $(function() {
         e.preventDefault();
         $.fn.fullpage.moveTo('slide3');
     });
+
+    // check to see if form fields are not empty
+    function formCheck() {
+        function validateEmail(email) {
+            var re = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/i;
+            return re.test(email);
+        };
+
+        var email = $('#mce-EMAIL').val();
+        var isEmailValid = validateEmail(email);
+        if (isEmailValid === true) {
+            updateDB();
+            $('#mce-EMAIL').removeClass('error');
+        } else {
+            $('#mce-EMAIL').addClass('error');
+        };
+    };
+
+    function updateDB() {
+        var info = {
+            'emailaddress': $('.email-sign-up #mce-EMAIL').val()
+        };
+
+        // update database
+        $.ajax({
+            type: "post",
+            //url: '//'+window.location.hostname+'/dbUpdate.php',
+            data: info
+        }).done(function(data,url) {
+            alert('Thank you!');
+            //$('.email-sign-up #submit').addClass('disabled');
+        });
+    };
+
+    $('.email-sign-up').on('click', '#submit', function(e) {
+        formCheck();
+        e.preventDefault();
+    });
 });
