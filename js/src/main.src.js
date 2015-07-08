@@ -72,7 +72,6 @@ $(function() {
         if ( !$(this).hasClass('disabled') ) {
             formCheck();
             e.preventDefault();
-            console.log('added');
         };
     });
 });
