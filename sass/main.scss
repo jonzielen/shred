@@ -157,6 +157,9 @@ body {
     @include background-size(cover);
     text-align:center;
 }
+.mobile-only {
+    display:none !important;
+}
 #header {
     position: relative;
     .fullscreen-bg {
@@ -217,13 +220,13 @@ body {
             outline:none;
             display:inline-block;
         }
-        .app-store-link {
-            float:left;
-        }
-        .mac-app-store-link {
-            float:right;
-            margin:0 -12px 0 0;
-        }
+        // .app-store-link {
+        //     float:left;
+        // }
+        // .mac-app-store-link {
+        //     float:right;
+        //     margin:0 -12px 0 0;
+        // }
     }
     .arrow {
       @include padding-margin(3% 0 0 0,0 auto);
@@ -234,8 +237,9 @@ body {
         height:image-height('../img/arrow_down.png');
         display:block;
         a {
-          position: absolute;
+          position:absolute;
           top:300%;
+          left:0;
           width:image-width('../img/arrow_down.png');
           height:image-height('../img/arrow_down.png');
         }
@@ -393,6 +397,9 @@ body {
 }
 
 @media (max-width: 767px) {
+    .mobile-only {
+    display:block !important;
+    }
     #header {
         @include padding-margin(0,0);
         .fp-tableCell {
@@ -408,7 +415,7 @@ body {
         }
         .links {
             .app-store-link {
-                float:none;
+                //float:none;
                 @include padding-margin(0,0 auto 4%);
                 display: block;
                 width:image-width('../img/badge_appstore_desktop.png');

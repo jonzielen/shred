@@ -29,4 +29,10 @@ $(function() {
         e.preventDefault();
         $.fn.fullpage.moveTo('slide2');
     })
+
+    // mac app store link
+    $('.links').on('click', '.mac-app-store-link', function(e) {
+        e.preventDefault();
+        $.fn.fullpage.moveTo('slide3');
+    });
 });
