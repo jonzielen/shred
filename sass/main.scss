@@ -4,17 +4,14 @@
 @import "jquery.fullPage";
 
 /* HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
-
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
 html {
     color: #222;
     font-size: 1em;
@@ -28,12 +25,10 @@ html {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
-
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
 }
-
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -42,7 +37,6 @@ html {
 /*
  * A better looking default horizontal rule
  */
-
 hr {
     display: block;
     height: 1px;
@@ -57,7 +51,6 @@ hr {
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
-
 audio,
 canvas,
 iframe,
@@ -70,7 +63,6 @@ video {
 /*
  * Remove default fieldset styles.
  */
-
 fieldset {
     border: 0;
     margin: 0;
@@ -80,7 +72,6 @@ fieldset {
 /*
  * Allow only vertical resizing of textareas.
  */
-
 textarea {
     resize: vertical;
 }
@@ -88,7 +79,6 @@ textarea {
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
-
 .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
@@ -99,15 +89,13 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
 /* SASS VARIABLES */
-$font-path:'../fonts/';
+$font-path: '../fonts/';
 $h2-font-size: 1.7em; // 28pt
 $h3-font-size: 1.4em; // 21pt
 $h4-font-size: 1em; // 16 pt
 $p-font-size: 1em; // 16 pt
-$small-font-size: .8em; // 13pt
-
+$small-font-size: 0.8em; // 13pt
 @font-face {
     @include fontFace('san_francisco_displaybold', 'sanfranciscodisplay-bold-webfont');
 }
@@ -136,93 +124,99 @@ $small-font-size: .8em; // 13pt
 // @font-face {
 //     @include fontFace('san_francisco_displayultraLt', 'sanfranciscodisplay-ultralight-webfont');
 // }
-h1,h2,h3,h4,h5,h6,p {
-  @include padding-margin(0,0);
-  font-weight:normal;
-  font-style:normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    @include padding-margin(0,0);
+    font-weight: normal;
+    font-style: normal;
 }
 body {
-    background-color:#282828;
-    padding:0;
-    margin:0;
-    text-align:center;
-    font-family:'san_francisco_displayregular';
+    background-color: #282828;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: 'san_francisco_displayregular';
 }
 .img-responsive {
-    display:block;
-    max-width:100%;
-    height:auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 .section {
     @include background-size(cover);
-    text-align:center;
+    text-align: center;
 }
 .mobile-only {
-    display:none !important;
+    display: none !important;
 }
 #header {
     position: relative;
     .fullscreen-bg {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      overflow: hidden;
-      z-index: -100;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: -100;
     }
     .fullscreen-bg .bk-video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
     @media (min-aspect-ratio: 16/9) {
-      .fullscreen-bg .bk-video {
-        width: 100%;
-        height: auto; /* actually taller than viewport */
-      }
+        .fullscreen-bg .bk-video {
+            width: 100%;
+            height: auto;
+            /* actually taller than viewport */
+        }
     }
     @media (max-aspect-ratio: 16/9) {
-      .fullscreen-bg .bk-video {
-        width: auto; /* actually wider than viewport */
-        height: 100%;
-      }
+        .fullscreen-bg .bk-video {
+            width: auto;
+            /* actually wider than viewport */
+            height: 100%;
+        }
     }
     @media (max-width: 767px) {
-      .fullscreen-bg {
-        @include bg-img-full('../img/bg_header.jpg');
-      }
-
-      .fullscreen-bg .bk-video {
-        display:none;
-      }
+        .fullscreen-bg {
+            @include bg-img-full('../img/bg_header.jpg');
+        }
+        .fullscreen-bg .bk-video {
+            display: none;
+        }
     }
     h1 {
         @include bg-img('../img/logo_shred_desktop.png');
-        text-indent:-99999px;
+        text-indent: -99999px;
         @include padding-margin(0,0 auto);
     }
-
     $offset-mid-padding: 14%;
-
     h2 {
         @include padding-margin($offset-mid-padding 0 0 0,0);
-        color:#fff;
-        font-family:'san_francisco_displaybold';
-        font-size:$h2-font-size;
+        color: #fff;
+        font-family: 'san_francisco_displaybold';
+        font-size: $h2-font-size;
         @include text-shadow(0 0 .75em rgba(0, 0, 0, 1));
-        letter-spacing:5px;
-        text-transform:uppercase;
+        letter-spacing: 5px;
+        text-transform: uppercase;
     }
     .links {
-        max-width:385px;
+        max-width: 385px;
         @include padding-margin(0 0 $offset-mid-padding 0,0 auto);
         a {
-            outline:none;
-            display:inline-block;
+            outline: none;
+            display: inline-block;
         }
+
         // .app-store-link {
         //     float:left;
         // }
@@ -232,20 +226,20 @@ body {
         // }
     }
     .arrow {
-      @include padding-margin(0 0 0 0,0 auto);
-      width:100%;
-      position:absolute;
-      bottom:4%;
-      .arrow-inner {
-        width:image-width('../img/arrow_down.png');
-        height:image-height('../img/arrow_down.png');
-        display:block;
-        margin:0 auto;
-        a {
-          width:image-width('../img/arrow_down.png');
-          height:image-height('../img/arrow_down.png');
+        @include padding-margin(0 0 0 0,0 auto);
+        width: 100%;
+        position: absolute;
+        bottom: 4%;
+        .arrow-inner {
+            width: image-width('../img/arrow_down.png');
+            height: image-height('../img/arrow_down.png');
+            display: block;
+            margin: 0 auto;
+            a {
+                width: image-width('../img/arrow_down.png');
+                height: image-height('../img/arrow_down.png');
+            }
         }
-      }
     }
 }
 #collage {
@@ -253,157 +247,156 @@ body {
     .box {
         @include bg-img('../img/letterbox_desktop.jpg');
         h2 {
-          font-family:'san_francisco_displaybold';
-          text-transform:uppercase;
-          font-size:$h2-font-size;
-          letter-spacing:5.6px;
-          @include padding-margin(6% 0 3% 0,0);
+            font-family: 'san_francisco_displaybold';
+            text-transform: uppercase;
+            font-size: $h2-font-size;
+            letter-spacing: 5.6px;
+            @include padding-margin(6% 0 3% 0,0);
         }
         p {
-          font-family:'san_francisco_displaymedium';
-          color:#282829;
-          font-size:$p-font-size;
+            font-family: 'san_francisco_displaymedium';
+            color: #282829;
+            font-size: $p-font-size;
         }
     }
 }
 #how-to {
-  .how-to-inner {
-    max-width:550px;
-    @include padding-margin(0,0 auto);
-    .email-sign-up {
-        padding:0 0 2% 0;
+    .how-to-inner {
+        max-width: 550px;
+        @include padding-margin(0,0 auto);
+        .email-sign-up {
+            padding: 0 0 2%;
+            h4 {
+                @include padding-margin(2% 0 8%,0);
+            }
+            input {
+                display: block;
+                @include padding-margin(8px 0,0 auto 14px);
+                border: 2px solid #696969;
+                background-color: #272727;
+                width: 246px;
+                text-align: center;
+                font-size: $small-font-size;
+                color: #fff;
+                outline: none;
+            }
+            input[type="email"] {
+                @include input-placeholder {
+                    color: #696969;
+                }
+            }
+            .error {
+                border: 2px solid #b6072e;
+            }
+            button {
+                display: block;
+                @include padding-margin(8px 0,0 auto);
+                background-color: #181818;
+                color: #fff;
+                width: 250px;
+                border: none;
+                text-transform: uppercase;
+                font-family: 'san_francisco_displaybold';
+                outline: none;
+                &:hover {
+                    background-color: #b6072e;
+                }
+            }
+        }
+        figure {
+            @include padding-margin(8% 0 0 0,0);
+            text-align: left;
+            img {
+                float: left;
+                display: inline-block;
+                @include padding-margin(0,0 4% 0 15%);
+            }
+            figcaption {
+                float: left;
+                display: inline-block;
+                width: 62%;
+            }
+        }
+        h3 {
+            font-family: 'san_francisco_displaybold';
+            color: #fff;
+            font-size: $h3-font-size;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
         h4 {
-            @include padding-margin(2% 0 8%,0);
+            color: #fff;
+            font-size: $h4-font-size;
+            @include padding-margin(0,0 0 1% 0);
         }
-        input {
-            display:block;
-            @include padding-margin(8px 0,0 auto 14px);
-            border:2px solid #696969;
-            background-color:#272727;
-            width:246px;
-            text-align:center;
-            font-size:$small-font-size;
-            color:#fff;
-            outline:none;
-        }
-        input[type="email"] {
-            @include input-placeholder {
-                color:#696969;
-            }
-        }
-        .error {
-            border:2px solid #b6072e;
-        }
-        button {
-            display: block;
-            @include padding-margin(8px 0,0 auto);
-            background-color:#181818;
-            color:#fff;
-            width:250px;
-            border:none;
-            text-transform:uppercase;
-            font-family:'san_francisco_displaybold';
-            outline:none;
-            &:hover {
-                background-color:#b6072e;
-            }
+        p {
+            color: #949494;
+            font-size: $p-font-size;
+            line-height: normal;
         }
     }
-    figure {
-      @include padding-margin(8% 0 0 0,0);
-      text-align:left;
-
-      img {
-        float:left;
-        display: inline-block;
-        @include padding-margin(0,0 4% 0 15%);
-      }
-      figcaption {
-        float:left;
-        display: inline-block;
-        width:62%;
-      }
-    }
-    h3 {
-      font-family:'san_francisco_displaybold';
-      color:#fff;
-      font-size:$h3-font-size;
-      letter-spacing:0.1em;
-      text-transform:uppercase;
-    }
-    h4 {
-      color:#fff;
-      font-size:$h4-font-size;
-      @include padding-margin(0,0 0 1% 0);
-    }
-    p {
-      color:#949494;
-      font-size:$p-font-size;
-      line-height:normal;
-    }
-  }
 }
 #about-us {
     @include bg-img-full('../img/bg_aboutus_desktop.jpg');
     .fp-tableCell {
-      vertical-align:top;
+        vertical-align: top;
     }
     .about-us-inner {
-      @include padding-margin(6% 0 0 0,0 auto);
-      height:75%;
-      h2 {
-        text-transform:uppercase;
-        color:#282828;
-        font-size:$h2-font-size;
-        font-family:'san_francisco_displaybold';
-        letter-spacing:0.2em;
-        @include padding-margin(0 0 0.7% 0,0 auto);
-        max-width:340px;
-      }
-      p {
-        font-size:$p-font-size;
-        font-family:'san_francisco_displaymedium';
-        color:#282828;
-        line-height:normal;
-        max-width:340px;
-        @include padding-margin(0,0 auto);
-        a {
-          font-family:'san_francisco_displaybold';
-          color:#282828;
-          text-decoration:underline;
-          &:hover {
-            text-decoration:none;
-          }
-        }
-      }
-      .lower {
-        @include padding-margin(1% 0 0 0,0);
-      }
-      .copyright {
-        position:absolute;
-        bottom:0;
-        display:block;
-        background-color:rgba(0, 0, 0, 0.7);
-        text-align:center;
-        width:100%;
-        .cw-inner {
-          display:block;
-          width:100%;
-          @include padding-margin(2% 0,0);
+        @include padding-margin(6% 0 0 0,0 auto);
+        height: 75%;
+        h2 {
+            text-transform: uppercase;
+            color: #282828;
+            font-size: $h2-font-size;
+            font-family: 'san_francisco_displaybold';
+            letter-spacing: 0.2em;
+            @include padding-margin(0 0 0.7% 0,0 auto);
+            max-width: 340px;
         }
         p {
-          font-size:$p-font-size;
-          font-family:'san_francisco_displaymedium';
-          color:#fff;
-          line-height:normal;
-          max-width:100%;
+            font-size: $p-font-size;
+            font-family: 'san_francisco_displaymedium';
+            color: #282828;
+            line-height: normal;
+            max-width: 340px;
+            @include padding-margin(0,0 auto);
+            a {
+                font-family: 'san_francisco_displaybold';
+                color: #282828;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
-        .img-responsive {
-          position:absolute;
-          right:2%;
-          top:36%;
+        .lower {
+            @include padding-margin(1% 0 0 0,0);
         }
-      }
+        .copyright {
+            position: absolute;
+            bottom: 0;
+            display: block;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            width: 100%;
+            .cw-inner {
+                display: block;
+                width: 100%;
+                @include padding-margin(2% 0,0);
+            }
+            p {
+                font-size: $p-font-size;
+                font-family: 'san_francisco_displaymedium';
+                color: #fff;
+                line-height: normal;
+                max-width: 100%;
+            }
+            .img-responsive {
+                position: absolute;
+                right: 2%;
+                top: 36%;
+            }
+        }
     }
 }
 
@@ -415,89 +408,87 @@ body {
 //         }
 //     }
 // }
-
 // for small screens
 @media (max-width: 767px) {
     #header {
         @include padding-margin(0,0);
         .fp-tableCell {
-          @include padding-margin(0,0);
-          vertical-align:middle;
+            @include padding-margin(0,0);
+            vertical-align: middle;
         }
         h1 {
             @include padding-margin(0,0 auto);
         }
         h2 {
-            width:80%;
+            width: 80%;
             @include padding-margin(0 0 15% 0,0 auto);
         }
         .links {
             .app-store-link {
+
                 //float:none;
                 @include padding-margin(0,0 auto 4%);
                 display: block;
-                width:image-width('../img/badge_appstore_desktop.png');
+                width: image-width('../img/badge_appstore_desktop.png');
             }
             .mac-app-store-link {
-                display:none;
-                height:0;
+                display: none;
+                height: 0;
             }
         }
         .arrow {
-          a {
-            img {
-              top:130%;
+            a {
+                img {
+                    top: 130%;
+                }
             }
-          }
         }
     }
     #collage {
         .box {
-            background:url('../img/letterbox_mobile.jpg') 0 0 no-repeat;
-            width:image-width('../img/letterbox_mobile.jpg')-20px;
-            height:image-height('../img/letterbox_mobile.jpg')-20px;
-            padding:10px;
+            background: url("../img/letterbox_mobile.jpg") 0 0 no-repeat;
+            width: image-width('../img/letterbox_mobile.jpg')-20px;
+            height: image-height('../img/letterbox_mobile.jpg')-20px;
+            padding: 10px;
             p {
-                display:inline;
+                display: inline;
             }
         }
     }
     #how-to {
         .how-to-inner {
-          @include padding-margin(6% 0 18% 0,0);
-
-          .email-sign-up {
-              h4 {
-                  font-size:$small-font-size;
-              }
-          }
+            @include padding-margin(6% 0 18% 0,0);
+            .email-sign-up {
+                h4 {
+                    font-size: $small-font-size;
+                }
+            }
             figure {
-                text-align:center;
-
+                text-align: center;
                 img {
-                    float:none;
+                    float: none;
                     display: block;
                     @include padding-margin(0,0 auto 2%);
                 }
                 figcaption {
-                    float:none;
+                    float: none;
                 }
             }
         }
     }
     #about-us {
-      .about-us-inner {
-        @include padding-margin(6% 0 0 0,0 auto);
-        h2 {
-          @include padding-margin(0 6% 2%,0);
+        .about-us-inner {
+            @include padding-margin(6% 0 0 0,0 auto);
+            h2 {
+                @include padding-margin(0 6% 2%,0);
+            }
+            p {
+                @include padding-margin(0 6%,0);
+            }
+            .lower {
+                @include padding-margin(4% 0 0 0,0);
+            }
         }
-        p {
-          @include padding-margin(0 6%,0);
-        }
-        .lower {
-          @include padding-margin(4% 0 0 0,0);
-        }
-      }
         .copyright {
             .cw-inner {
                 .img-responsive {
@@ -505,8 +496,8 @@ body {
                     position: static;
                 }
                 p {
-                  @include padding-margin(0 2%,0);
-                  font-size:$small-font-size;
+                    @include padding-margin(0 2%,0);
+                    font-size: $small-font-size;
                 }
             }
         }
@@ -516,11 +507,9 @@ body {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 /*
  * Hide visually and from screen readers:
  */
-
 .hidden {
     display: none !important;
 }
@@ -529,7 +518,6 @@ body {
  * Hide only visually, but have it available for screen readers:
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
-
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -546,7 +534,6 @@ body {
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
-
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
     clip: auto;
@@ -560,7 +547,6 @@ body {
 /*
  * Hide visually and from screen readers, but maintain layout
  */
-
 .invisible {
     visibility: hidden;
 }
@@ -576,13 +562,13 @@ body {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
-
 .clearfix:after {
     clear: both;
 }
@@ -592,15 +578,13 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 }
-
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -609,27 +593,24 @@ body {
    Inlined to avoid the additional HTTP request:
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
-
 @media print {
     *,
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+        color: #000 !important;
+        /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
     }
-
     a,
     a:visited {
         text-decoration: underline;
     }
-
     a[href]:after {
         content: " (" attr(href) ")";
     }
-
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
@@ -638,12 +619,10 @@ body {
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
     }
-
     pre,
     blockquote {
         border: 1px solid #999;
@@ -654,27 +633,22 @@ body {
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-
     thead {
         display: table-header-group;
     }
-
     tr,
     img {
         page-break-inside: avoid;
     }
-
     img {
         max-width: 100% !important;
     }
-
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
     }
-
     h2,
     h3 {
         page-break-after: avoid;
