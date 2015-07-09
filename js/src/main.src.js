@@ -46,17 +46,16 @@ $(function() {
         var email = $('#mce-EMAIL').val();
         var isEmailValid = validateEmail(email);
         if (isEmailValid === true) {
-            $('.email-sign-up #submit').addClass('disabled');
+            $('.email-sign-up button').addClass('disabled');
             $('#mce-EMAIL').removeClass('error');
         } else {
             $('#mce-EMAIL').addClass('error');
         };
     };
 
-    $('.email-sign-up').on('click', '#submit', function(e) {
+    $('.email-sign-up').on('click', 'button', function() {
         if ( !$(this).hasClass('disabled') ) {
             formCheck();
-            e.preventDefault();
         };
     });
 });
