@@ -213,11 +213,11 @@ body {
             outline: none;
             display: inline-block;
         }
-        // .app-store-link {
-        //     float:left;
-        // }
+        .app-store-link {
+            display:none;
+        }
         .mac-app-store-link {
-            display: none;
+            float: none;
         }
     }
     .arrow {
