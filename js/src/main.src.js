@@ -36,26 +36,17 @@ $(function() {
         $.fn.fullpage.moveTo('slide3');
     });
 
-    // check to see if email field is valid
-    function formCheck() {
-        function validateEmail(email) {
-            var re = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/i;
-            return re.test(email);
-        };
-
-        var email = $('#mce-EMAIL').val();
-        var isEmailValid = validateEmail(email);
-        if (isEmailValid === true) {
-            $('.email-sign-up button').addClass('disabled');
-            $('#mce-EMAIL').removeClass('error');
+    function checkInput(email) {
+        if (email == '') {
+            $('.email-sign-up button').removeClass('active');
         } else {
-            $('#mce-EMAIL').addClass('error');
-        };
-    };
+            $('.email-sign-up button').addClass('active');
+        }
+    }
 
-    $('.email-sign-up').on('click', 'button', function() {
-        if ( !$(this).hasClass('disabled') ) {
-            formCheck();
-        };
+    $('.email-sign-up').on('keyup', '#mce-EMAIL', function() {
+        var email = $('#mce-EMAIL').val();
+        checkInput(email);
     });
+
 });

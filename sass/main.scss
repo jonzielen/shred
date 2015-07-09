@@ -296,8 +296,11 @@ body {
                 font-family: 'san_francisco_displaybold';
                 outline: none;
                 letter-spacing:0.6px;
+                @include transition-property(all);
+                @include transition-duration(0.25s);
+                @include transition-timing-function(ease);
             }
-            .disabled {
+            .active {
                 background-color: #b6072e;
             }
         }
