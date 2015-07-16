@@ -38,15 +38,13 @@ $(function() {
 
     function checkInput(email) {
         if (email == '') {
-            $('.email-sign-up button').removeClass('active');
+            $('#mc-embedded-subscribe-form button').removeClass('active');
         } else {
-            $('.email-sign-up button').addClass('active');
+            $('#mc-embedded-subscribe-form button').addClass('active');
         }
     }
 
-    $('.email-sign-up').on('keyup', '#mce-EMAIL', function() {
-        var email = $('#mce-EMAIL').val();
-        checkInput(email);
+    $('#mc-embedded-subscribe-form').on('keyup', '#mce-EMAIL', function() {
+        checkInput(this.value);
     });
-
 });

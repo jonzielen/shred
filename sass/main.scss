@@ -1,3 +1,12 @@
+/* SASS VARIABLES */
+$font-path: '../fonts/';
+$h2-font-size: 1.7em; // 28pt
+$h3-font-size: 1.4em; // 21pt
+$h4-font-size: 1em; // 16 pt
+$p-font-size: 1em; // 16 pt
+$small-font-size: 0.8em; // 13pt
+$offset-mid-padding: 14%;
+
 @import "compass/css3";
 @import "mixins";
 @import "normalize";
@@ -89,13 +98,6 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/* SASS VARIABLES */
-$font-path: '../fonts/';
-$h2-font-size: 1.7em; // 28pt
-$h3-font-size: 1.4em; // 21pt
-$h4-font-size: 1em; // 16 pt
-$p-font-size: 1em; // 16 pt
-$small-font-size: 0.8em; // 13pt
 @font-face {
     @include fontFace('san_francisco_displaybold', 'sanfranciscodisplay-bold-webfont');
 }
@@ -104,6 +106,9 @@ $small-font-size: 0.8em; // 13pt
 }
 @font-face {
     @include fontFace('san_francisco_displayregular', 'sanfranciscodisplay-regular-webfont');
+}
+@font-face {
+    @include fontFace('san_francisco_displaysemibold', 'sanfranciscodisplay-semibold-webfont');
 }
 /******* COMMENT THESE IN AS NEEDED - FILES ALREADY IN THE FONTS FOLDER *******/
 // @font-face {
@@ -114,9 +119,6 @@ $small-font-size: 0.8em; // 13pt
 // }
 // @font-face {
 //     @include fontFace('san_francisco_displaylight', 'sanfranciscodisplay-light-webfont');
-// }
-// @font-face {
-//     @include fontFace('san_francisco_displaysemibold', 'sanfranciscodisplay-semibold-webfont');
 // }
 // @font-face {
 //     @include fontFace('san_francisco_displaythin', 'sanfranciscodisplay-thin-webfont');
@@ -196,15 +198,8 @@ body {
         text-indent: -99999px;
         @include padding-margin(0,0 auto);
     }
-    $offset-mid-padding: 14%;
     h2 {
-        @include padding-margin($offset-mid-padding 0 0 0,0);
-        color: #fff;
-        font-family: 'san_francisco_displaybold';
-        font-size: $h2-font-size;
-        @include text-shadow(0 0 .75em rgba(0, 0, 0, 1));
-        letter-spacing: 5px;
-        text-transform: uppercase;
+        @include h2(#fff);
     }
     .links {
         max-width: 385px;
@@ -286,19 +281,9 @@ body {
                 border: 2px solid #b6072e;
             }
             button {
-                display: block;
-                @include padding-margin(11px 0,0 auto);
-                background-color: #181818;
-                color: #fff;
                 width: 250px;
-                border: none;
-                text-transform: uppercase;
-                font-family: 'san_francisco_displaybold';
-                outline: none;
-                letter-spacing:0.6px;
-                @include transition-property(all);
-                @include transition-duration(0.25s);
-                @include transition-timing-function(ease);
+                @include padding-margin(11px 0,0 auto);
+                @include redButton;
             }
             .active {
                 background-color: #b6072e;
@@ -398,6 +383,37 @@ body {
                 top: 36%;
             }
         }
+    }
+}
+
+/* Email Landing Page */
+#email-section {
+    h2 {
+        @include h2(#fff);
+    }
+    p {
+        font-size: $p-font-size;
+        font-family: 'san_francisco_displaysemibold';
+        color: #fff;
+        line-height: normal;
+        width:530px;
+        @include padding-margin(0,0 auto);
+    }
+
+    .shred-icon-2 {
+        @include bg-img('../img/icon_shred_pg2.png')
+    }
+    .email-field {
+        float: left;
+    }
+    .signup {
+        float: right;
+        width: 250px;
+        @include padding-margin(11px 0,0 auto);
+        @include redButton;
+    }
+    .active {
+        background-color: #b6072e;
     }
 }
 

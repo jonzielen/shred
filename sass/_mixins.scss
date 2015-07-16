@@ -28,3 +28,27 @@
     @include background-size(cover);
     @include padding-margin(0,0);
 }
+
+@mixin h2($color) {
+    @include padding-margin($offset-mid-padding 0 0 0,0);
+    @include text-shadow(0 0 .75em rgba(0, 0, 0, 1));
+    color:$color;
+    font-family: 'san_francisco_displaybold';
+    font-size: $h2-font-size;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+@mixin redButton() {
+    display: block;
+    background-color: #181818;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-family: 'san_francisco_displaybold';
+    outline: none;
+    letter-spacing:0.6px;
+    @include transition-property(all);
+    @include transition-duration(0.25s);
+    @include transition-timing-function(ease);
+}
