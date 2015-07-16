@@ -91,3 +91,17 @@ ra);r.keydown(function(a){clearTimeout(Ha);var b=c(":focus");b.is("textarea")||b
 break;case 37:h.k.left&&e.moveSlideLeft();break;case 39:h.k.right&&e.moveSlideRight()}},150))});r.keyup(function(a){O=a.ctrlKey});c(l).blur(function(){O=!1});var Ha;f.mousedown(function(a){2==a.which&&(P=a.pageY,f.on("mousemove",Qa))});f.mouseup(function(a){2==a.which&&f.off("mousemove")});var P=0;r.on("click touchstart","#fp-nav a",function(a){a.preventDefault();a=c(this).parent().index();B(c(".fp-section").eq(a))});r.on("click touchstart",".fp-slidesNav a",function(a){a.preventDefault();a=c(this).closest(".fp-section").find(".fp-slides");
 var b=a.find(".fp-slide").eq(c(this).closest("li").index());F(a,b)});d.normalScrollElements&&(r.on("mouseenter",d.normalScrollElements,function(){e.setMouseWheelScrolling(!1)}),r.on("mouseleave",d.normalScrollElements,function(){e.setMouseWheelScrolling(!0)}));c(".fp-section").on("click touchstart",".fp-controlArrow",function(){c(this).hasClass("fp-prev")?h.m.left&&e.moveSlideLeft():h.m.right&&e.moveSlideRight()});m.resize(va);var ca=q,xa;e.destroy=function(a){e.setAutoScrolling(!1,"internal");e.setAllowScrolling(!1);
 e.setKeyboardScrolling(!1);f.addClass("fp-destroyed");m.off("scroll",ga).off("hashchange",ra).off("resize",va);r.off("click","#fp-nav a").off("mouseenter","#fp-nav li").off("mouseleave","#fp-nav li").off("click",".fp-slidesNav a").off("mouseover",d.normalScrollElements).off("mouseout",d.normalScrollElements);c(".fp-section").off("click",".fp-controlArrow");a&&Wa()}}});
+
+// Google Analytics
+var str = window.location.host;
+var patt = /(\.dev$|\.zielenkievicz\.com$)/g;
+var match = patt.test(str);
+
+if (!match) {
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-64909606-1','auto');ga('send','pageview');
+}
