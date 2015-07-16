@@ -394,7 +394,7 @@ body {
         font-family:'san_francisco_displaysemibold';
         color:#fff;
         line-height:normal;
-        width:530px;
+        width:100%;
         @include padding-margin(0 0 6% 0,0 auto);
     }
     .shred-icon-2 {
@@ -522,6 +522,9 @@ body {
                 }
             }
         }
+    }
+    #email-section {
+        @include padding-margin(0 2%,0);
     }
 }
 
