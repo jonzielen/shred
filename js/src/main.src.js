@@ -24,20 +24,21 @@ $(function() {
     });
 
     // scroll links
-    $('#homepage .arrow').on('click', 'a', function(e) {
-        e.preventDefault();
-        $.fn.fullpage.moveTo('slide2');
-    })
-
-    $('#email-landing .arrow').on('click', 'a', function(e) {
+    $('.arrow').on('click', 'a', function(e) {
         e.preventDefault();
         $.fn.fullpage.moveTo('slide2');
     })
 
     // mac app store link
-    $('.links').on('click', '.mac-app-store-link', function(e) {
+    $('#homepage .links').on('click', '.mac-app-store-link', function(e) {
         e.preventDefault();
         $.fn.fullpage.moveTo('slide3');
+    });
+
+    $('#email-landing .links').on('click', '.mac-app-store-link', function(e) {
+        console.log('clicked');
+        e.preventDefault();
+        $.fn.fullpage.moveTo('slide2');
     });
 
     function checkInput(email) {

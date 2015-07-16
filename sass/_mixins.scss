@@ -52,3 +52,14 @@
     @include transition-duration(0.25s);
     @include transition-timing-function(ease);
 }
+
+@mixin darkInput() {
+    display: block;
+    border: 2px solid #696969;
+    background-color: #272727;
+    text-align: center;
+    font-size:$p-font-size;
+    color: #fff;
+    outline: none;
+    @include border-radius(0);
+}

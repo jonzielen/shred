@@ -164,6 +164,7 @@ body {
         left: 0;
         overflow: hidden;
         z-index: -100;
+        @include bg-img-full('../img/bg_header.jpg');
     }
     .fullscreen-bg .bk-video {
         position: absolute;
@@ -187,9 +188,6 @@ body {
         }
     }
     @media (max-width: 767px) {
-        .fullscreen-bg {
-            @include bg-img-full('../img/bg_header.jpg');
-        }
         .fullscreen-bg .bk-video {
             display: none;
         }
@@ -262,16 +260,9 @@ body {
                 letter-spacing:0.5px;
             }
             input {
-                display: block;
-                @include padding-margin(13px 0,0 auto 14px);
-                border: 2px solid #696969;
-                background-color: #272727;
                 width: 246px;
-                text-align: center;
-                font-size:$p-font-size;
-                color: #fff;
-                outline: none;
-                @include border-radius(0);
+                @include padding-margin(13px 0,0 auto 14px);
+                @include darkInput;
             }
             input[type="email"] {
                 @include input-placeholder {
@@ -389,32 +380,43 @@ body {
 
 /* Email Landing Page */
 #email-section {
+    .email-section-inner {
+        max-width:440px;
+        @include padding-margin(0,0 auto);
+    }
     h2 {
         @include h2(#fff);
     }
     p {
-        font-size: $p-font-size;
-        font-family: 'san_francisco_displaysemibold';
-        color: #fff;
-        line-height: normal;
+        font-size:$p-font-size;
+        font-family:'san_francisco_displaysemibold';
+        color:#fff;
+        line-height:normal;
         width:530px;
         @include padding-margin(0,0 auto);
     }
-
     .shred-icon-2 {
         @include bg-img('../img/icon_shred_pg2.png')
     }
     .email-field {
-        float: left;
+        float:left;
+        width:59.7727272%; // 263px
     }
     .signup {
-        float: right;
-        width: 250px;
-        @include padding-margin(11px 0,0 auto);
+        float:right;
+        height:52px;
+        width:36.8181818%; // 162px
+        @include padding-margin(11px 0,1px 0 0 0);
         @include redButton;
     }
     .active {
         background-color: #b6072e;
+    }
+    input {
+        width:100%;
+        height:50px;
+        @include padding-margin(0,0);
+        @include darkInput;
     }
 }
 
