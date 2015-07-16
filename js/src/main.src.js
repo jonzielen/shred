@@ -17,14 +17,19 @@ $(function() {
             });
         },
         afterLoad: function(anchorLink, index) {
-            if ((1 == index) && !isMobile) {
+            if ((1 == index) && !isMobile && $('video').length > 0) {
                 $("video.bk-video").get(0).play();
             }
         }
     });
 
     // scroll links
-    $('.arrow').on('click', 'a', function(e) {
+    $('#homepage .arrow').on('click', 'a', function(e) {
+        e.preventDefault();
+        $.fn.fullpage.moveTo('slide2');
+    })
+
+    $('#email-landing .arrow').on('click', 'a', function(e) {
         e.preventDefault();
         $.fn.fullpage.moveTo('slide2');
     })
