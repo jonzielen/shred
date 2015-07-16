@@ -404,6 +404,12 @@ body {
         float:left;
         width:59.7727272%; // 263px
     }
+    input {
+        width:100%;
+        height:50px;
+        @include padding-margin(0,0);
+        @include darkInput;
+    }
     .signup {
         float:right;
         height:52px;
@@ -414,11 +420,53 @@ body {
     .active {
         background-color: #b6072e;
     }
-    input {
-        width:100%;
-        height:50px;
-        @include padding-margin(0,0);
-        @include darkInput;
+}
+/* Email Mobile Page */
+#email-mobile {
+    #header {
+        .fullscreen-bg {
+            @include bg-img-full('../img/bg_surfer_mobile.jpg');
+        }
+        p {
+            font-size:$p-font-size;
+            font-family:'san_francisco_displaysemibold';
+            color:#fff;
+            line-height:normal;
+            @include padding-margin(0 14%,0);
+        }
+    }
+    #email-mobile-section {
+        .email-mobile-section-inner {
+            @include padding-margin(0 10%,0);
+        }
+        h2 {
+            @include h2;
+            span {
+                display:block;
+            }
+        }
+        p {
+            font-size:$p-font-size;
+            font-family:'san_francisco_displaysemibold';
+            color:#fff;
+            line-height:normal;
+            @include padding-margin(12% 0 10%,0);
+        }
+        input {
+            width:100%;
+            height:44px;
+            @include padding-margin(0,0 auto 5%);
+            @include darkInput;
+        }
+        .signup {
+            width:100%;
+            height:45px;
+            @include padding-margin(0,0 auto);
+            @include redButton;
+        }
+        .active {
+            background-color: #b6072e;
+        }
     }
 }
 
@@ -523,6 +571,7 @@ body {
             }
         }
     }
+    /* Email Landing Page */
     #email-landing-section {
         .email-landing-section-inner {
             @include padding-margin(0 2%,0);
