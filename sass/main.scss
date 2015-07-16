@@ -7,6 +7,7 @@ $p-font-size: 1em; // 16 pt
 $small-font-size: 0.8em; // 13pt
 $offset-mid-padding: 14%;
 
+/* Compass Partials */
 @import "compass/css3";
 @import "mixins";
 @import "normalize";
