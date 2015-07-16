@@ -380,8 +380,8 @@ body {
 }
 
 /* Email Landing Page */
-#email-section {
-    .email-section-inner {
+#email-landing-section {
+    .email-landing-section-inner {
         max-width:530px;
         @include padding-margin(0,0 auto);
     }
@@ -523,8 +523,10 @@ body {
             }
         }
     }
-    #email-section {
-        @include padding-margin(0 2%,0);
+    #email-landing-section {
+        .email-landing-section-inner {
+            @include padding-margin(0 2%,0);
+        }
     }
 }
 
