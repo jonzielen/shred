@@ -29,8 +29,7 @@
     @include padding-margin(0,0);
 }
 
-@mixin h2($color) {
-    @include padding-margin($offset-mid-padding 0 0 0,0);
+@mixin h2($color:#fff) {
     @include text-shadow(0 0 .75em rgba(0, 0, 0, 1));
     color:$color;
     font-family: 'san_francisco_displaybold';

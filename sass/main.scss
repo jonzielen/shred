@@ -198,7 +198,8 @@ body {
         @include padding-margin(0,0 auto);
     }
     h2 {
-        @include h2(#fff);
+        @include padding-margin($offset-mid-padding 0 0 0,0);
+        @include h2;
     }
     .links {
         max-width: 385px;
@@ -381,11 +382,12 @@ body {
 /* Email Landing Page */
 #email-section {
     .email-section-inner {
-        max-width:440px;
+        max-width:530px;
         @include padding-margin(0,0 auto);
     }
     h2 {
-        @include h2(#fff);
+        @include padding-margin(6% 0,0);
+        @include h2;
     }
     p {
         font-size:$p-font-size;
@@ -393,7 +395,7 @@ body {
         color:#fff;
         line-height:normal;
         width:530px;
-        @include padding-margin(0,0 auto);
+        @include padding-margin(0 0 6% 0,0 auto);
     }
     .shred-icon-2 {
         @include bg-img('../img/icon_shred_pg2.png')
