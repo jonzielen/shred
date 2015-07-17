@@ -382,30 +382,29 @@ body {
 /* Email Landing Page */
 #email-landing-section {
     .email-landing-section-inner {
-        max-width:530px;
+        max-width:438px;
         @include padding-margin(0,0 auto);
     }
     h2 {
-        @include padding-margin(6% 0,0);
+        @include padding-margin(8% 0,0);
         @include h2;
     }
     p {
-        font-size:$p-font-size;
+        font-size:$small-font-size;
         font-family:'san_francisco_displaysemibold';
         color:#fff;
         line-height:normal;
         width:100%;
-        @include padding-margin(0 0 6% 0,0 auto);
+        @include padding-margin(0 0 8% 0,0 auto);
     }
     .shred-icon-2 {
         @include bg-img('../img/icon_shred_pg2.png')
     }
     .email-field {
         float:left;
-        width:59.7727272%; // 263px
     }
     input {
-        width:100%;
+        width:258px;
         height:50px;
         @include padding-margin(0,0);
         @include darkInput;
@@ -413,7 +412,7 @@ body {
     .signup {
         float:right;
         height:52px;
-        width:36.8181818%; // 162px
+        width:160px;
         @include padding-margin(11px 0,1px 0 0 0);
         @include redButton;
     }
