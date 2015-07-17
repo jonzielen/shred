@@ -436,7 +436,7 @@ body {
     }
     #email-mobile-section {
         .email-mobile-section-inner {
-            @include padding-margin(0 10%,0);
+            @include padding-margin(0 6%,0);
         }
         h2 {
             @include h2;
