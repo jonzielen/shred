@@ -426,12 +426,17 @@ body {
         .fullscreen-bg {
             @include bg-img-full('../img/bg_surfer_mobile.jpg');
         }
+        h2 {
+            span {
+                display:block;
+            }
+        }
         p {
             font-size:$p-font-size;
             font-family:'san_francisco_displaysemibold';
             color:#fff;
             line-height:normal;
-            @include padding-margin(0 14%,0);
+            @include padding-margin(0 14% 14%,0);
         }
     }
     #email-mobile-section {
@@ -490,7 +495,7 @@ body {
         }
         h2 {
             width: 80%;
-            @include padding-margin(0 0 15% 0,0 auto);
+            @include padding-margin(14% 0 15% 0,0 auto);
         }
         .links {
             .app-store-link {
