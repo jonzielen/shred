@@ -154,6 +154,12 @@ body {
     @include background-size(cover);
     text-align: center;
 }
+.desktop-only {
+    display:block;
+}
+.mobile-only {
+    display:none !important;
+}
 #header {
     position: relative;
     .fullscreen-bg {
@@ -164,7 +170,7 @@ body {
         left: 0;
         overflow: hidden;
         z-index: -100;
-        @include bg-img-full('../img/bg_header.jpg');
+        @include bg-img-full('../img/bg_surfer_mobile.jpg');
     }
     .fullscreen-bg .bk-video {
         position: absolute;
@@ -172,6 +178,13 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
+    }
+    p {
+        font-size:$p-font-size;
+        font-family:'san_francisco_displaysemibold';
+        color:#fff;
+        line-height:normal;
+        @include padding-margin(0 14% 14%,0);
     }
     @media (min-aspect-ratio: 16/9) {
         .fullscreen-bg .bk-video {
@@ -386,16 +399,19 @@ body {
         @include padding-margin(0,0 auto);
     }
     h2 {
-        @include padding-margin(8% 0,0);
+        @include padding-margin(0,0);
         @include h2;
+        span {
+            display:block;
+        }
     }
     p {
         font-size:$p-font-size;
-        font-family:'san_francisco_displayregular';
+        font-family:'san_francisco_displaysemibold';
         color:#fff;
         line-height:normal;
         width:100%;
-        @include padding-margin(0 0 8% 0,0 auto);
+        @include padding-margin(12% 0 10% 0,0 auto);
     }
     .shred-icon-2 {
         @include bg-img('../img/icon_shred_pg2.png')
@@ -484,6 +500,13 @@ body {
 // }
 // for small screens
 @media (max-width: 767px) {
+    .desktop-only {
+        display:none !important;
+    }
+    .mobile-only {
+        display:block !important;
+    }
+
     #header {
         @include padding-margin(0,0);
         .fp-tableCell {
@@ -578,19 +601,26 @@ body {
     /* Email Landing Page */
     #email-landing-section {
         .email-landing-section-inner {
-            @include padding-margin(0 2%,0);
+            @include padding-margin(0 6%,0);
             .email-field {
                 float:none;
-                width:95%;
+                width:100%;
                 margin:0 auto 4%;
                 input {
                     width:100%;
+                    height:44px;
+                    @include padding-margin(0,0 auto 5%);
+                    @include darkInput;
                 }
             }
-            button {
-                float:none;
-                width:96%;
-                margin:0 auto;
+            .signup {
+                width:100%;
+                height:45px;
+                @include padding-margin(0,0 auto);
+                @include redButton;
+            }
+            .active {
+                background-color: #b6072e;
             }
         }
     }
