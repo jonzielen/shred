@@ -391,8 +391,6 @@ body {
         }
     }
 }
-
-/* Email Landing Page */
 #email-landing-section {
     .email-landing-section-inner {
         max-width:438px;
@@ -436,68 +434,6 @@ body {
         background-color: #b6072e;
     }
 }
-/* Email Mobile Page */
-#email-mobile {
-    #header {
-        .fullscreen-bg {
-            @include bg-img-full('../img/bg_surfer_mobile.jpg');
-        }
-        h2 {
-            span {
-                display:block;
-            }
-        }
-        p {
-            font-size:$p-font-size;
-            font-family:'san_francisco_displaysemibold';
-            color:#fff;
-            line-height:normal;
-            @include padding-margin(0 14% 14%,0);
-        }
-    }
-    #email-mobile-section {
-        .email-mobile-section-inner {
-            @include padding-margin(0 6%,0);
-        }
-        h2 {
-            @include h2;
-            span {
-                display:block;
-            }
-        }
-        p {
-            font-size:$p-font-size;
-            font-family:'san_francisco_displaysemibold';
-            color:#fff;
-            line-height:normal;
-            @include padding-margin(12% 0 10%,0);
-        }
-        input {
-            width:100%;
-            height:44px;
-            @include padding-margin(0,0 auto 5%);
-            @include darkInput;
-        }
-        .signup {
-            width:100%;
-            height:45px;
-            @include padding-margin(0,0 auto);
-            @include redButton;
-        }
-        .active {
-            background-color: #b6072e;
-        }
-    }
-}
-
-// for large screens
-// @media (min-width: 1200px) {
-//     #header {
-//         h2 {
-//             @include padding-margin(10% 0 0 0,0);
-//         }
-//     }
-// }
 // for small screens
 @media (max-width: 767px) {
     .desktop-only {
@@ -598,7 +534,6 @@ body {
             }
         }
     }
-    /* Email Landing Page */
     #email-landing-section {
         .email-landing-section-inner {
             @include padding-margin(0 6%,0);
@@ -610,17 +545,12 @@ body {
                     width:100%;
                     height:44px;
                     @include padding-margin(0,0 auto 5%);
-                    @include darkInput;
                 }
             }
             .signup {
                 width:100%;
                 height:45px;
                 @include padding-margin(0,0 auto);
-                @include redButton;
-            }
-            .active {
-                background-color: #b6072e;
             }
         }
     }
