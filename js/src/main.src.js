@@ -26,20 +26,37 @@ $(function() {
     // scroll links
     $('.arrow').on('click', 'a', function(e) {
         e.preventDefault();
-        $.fn.fullpage.moveTo('slide2');
+        if (isMobile) {
+            $.fn.fullpage.moveTo('slide3');
+        }
+        else
+        {
+            $.fn.fullpage.moveTo('slide2');   
+        }
+    })
+
+    $('.arrow2').on('click', 'a', function(e) {
+        e.preventDefault();
+        if (isMobile) {
+            $.fn.fullpage.moveTo('slide5');
+        }
+        else
+        {
+            $.fn.fullpage.moveTo('slide3');
+        }
     })
 
     // mac app store link
-    $('#homepage .links').on('click', '.mac-app-store-link', function(e) {
-        e.preventDefault();
-        $.fn.fullpage.moveTo('slide3');
-    });
+    // $('#homepage .links').on('click', '.mac-app-store-link', function(e) {
+    //     e.preventDefault();
+    //     $.fn.fullpage.moveTo('slide3');
+    // });
 
-    $('#email-landing .links').on('click', '.mac-app-store-link', function(e) {
-        console.log('clicked');
-        e.preventDefault();
-        $.fn.fullpage.moveTo('slide2');
-    });
+    // $('#email-landing .links').on('click', '.mac-app-store-link', function(e) {
+    //     console.log('clicked');
+    //     e.preventDefault();
+    //     $.fn.fullpage.moveTo('slide2');
+    // });
 
     function checkInput(email) {
         if (email == '') {
