@@ -1,0 +1,708 @@
+/* SASS VARIABLES */
+$font-path: '../fonts/';
+$h2-font-size: 1.7em; // 28pt
+$h3-font-size: 1.4em; // 21pt
+$h4-font-size: 1em; // 16 pt
+$p-font-size: 1em; // 16 pt
+$small-font-size: 0.8em; // 13pt
+$offset-mid-padding: 14%;
+
+/* Compass Partials */
+@import "compass/css3";
+@import "mixins";
+@import "normalize";
+@import "jquery.fullPage";
+
+/* HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@font-face {
+    @include fontFace('san_francisco_displaybold', 'sanfranciscodisplay-bold-webfont');
+}
+@font-face {
+    @include fontFace('san_francisco_displaymedium', 'sanfranciscodisplay-medium-webfont');
+}
+@font-face {
+    @include fontFace('san_francisco_displayregular', 'sanfranciscodisplay-regular-webfont');
+}
+@font-face {
+    @include fontFace('san_francisco_displaysemibold', 'sanfranciscodisplay-semibold-webfont');
+}
+/******* COMMENT THESE IN AS NEEDED - FILES ALREADY IN THE FONTS FOLDER *******/
+// @font-face {
+//     @include fontFace('san_francisco_displayblack', 'sanfranciscodisplay-black-webfont');
+// }
+// @font-face {
+//     @include fontFace('san_francisco_displayheavy', 'sanfranciscodisplay-heavy-webfont');
+// }
+// @font-face {
+//     @include fontFace('san_francisco_displaylight', 'sanfranciscodisplay-light-webfont');
+// }
+// @font-face {
+//     @include fontFace('san_francisco_displaythin', 'sanfranciscodisplay-thin-webfont');
+// }
+// @font-face {
+//     @include fontFace('san_francisco_displayultraLt', 'sanfranciscodisplay-ultralight-webfont');
+// }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    @include padding-margin(0,0);
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-color: #282828;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: 'san_francisco_displayregular';
+}
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.section {
+    @include background-size(cover);
+    text-align: center;
+}
+.desktop-only {
+    display:block;
+}
+.mobile-only {
+    display:none !important;
+}
+#header {
+    position: relative;
+    .fullscreen-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: -100;
+        @include bg-img-full('../img/bg_surfer_mobile.jpg');
+    }
+    .fullscreen-bg .bk-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    p {
+        font-size:$p-font-size;
+        font-family:'san_francisco_displaysemibold';
+        color:#fff;
+        line-height:normal;
+        @include padding-margin(0 14% 14%,0);
+    }
+    @media (min-aspect-ratio: 16/9) {
+        .fullscreen-bg .bk-video {
+            width: 100%;
+            height: auto;
+            /* actually taller than viewport */
+        }
+    }
+    @media (max-aspect-ratio: 16/9) {
+        .fullscreen-bg .bk-video {
+            width: auto;
+            /* actually wider than viewport */
+            height: 100%;
+        }
+    }
+    @media (max-width: 767px) {
+        .fullscreen-bg .bk-video {
+            display: none;
+        }
+    }
+    h1 {
+        @include bg-img('../img/logo_shred_desktop.png');
+        text-indent: -99999px;
+        @include padding-margin(0,0 auto);
+    }
+    h2 {
+        @include padding-margin($offset-mid-padding 0 0 0,0);
+        @include h2;
+    }
+    .links {
+        max-width: 385px;
+        @include padding-margin(0 0 $offset-mid-padding 0,0 auto);
+        a {
+            outline: none;
+            display: inline-block;
+        }
+        .app-store-link {
+            display:none;
+        }
+        .mac-app-store-link {
+            float: none;
+        }
+    }
+    .arrow {
+        @include padding-margin(0 0 0 0,0 auto);
+        width: 100%;
+        position: absolute;
+        bottom: 4%;
+        .arrow-inner {
+            width: image-width('../img/arrow_down.png');
+            height: image-height('../img/arrow_down.png');
+            display: block;
+            margin: 0 auto;
+            a {
+                width: image-width('../img/arrow_down.png');
+                height: image-height('../img/arrow_down.png');
+            }
+        }
+    }
+}
+#collage {
+    @include bg-img-full('../img/bg_collage_desktop.jpg');
+    .box {
+        @include bg-img('../img/letterbox_desktop.jpg');
+        h2 {
+            font-family: 'san_francisco_displaybold';
+            text-transform: uppercase;
+            font-size: $h2-font-size;
+            letter-spacing: 5.6px;
+            @include padding-margin(6% 0 3% 0,0);
+        }
+        p {
+            font-family: 'san_francisco_displaymedium';
+            color: #282829;
+            font-size: $p-font-size;
+        }
+    }
+}
+#how-to {
+    .how-to-inner {
+        max-width: 550px;
+        @include padding-margin(0,0 auto);
+        .email-sign-up {
+            padding: 0 0 2%;
+            h4 {
+                @include padding-margin(2% 0 8%,0);
+                letter-spacing:0.5px;
+            }
+            input {
+                width: 246px;
+                @include padding-margin(13px 0,0 auto 14px);
+                @include darkInput;
+            }
+            input[type="email"] {
+                @include input-placeholder {
+                    color: #696969;
+                }
+            }
+            .error {
+                border: 2px solid #b6072e;
+            }
+            button {
+                width: 250px;
+                @include padding-margin(11px 0,0 auto);
+                @include redButton;
+            }
+            .active {
+                background-color: #b6072e;
+            }
+        }
+        figure {
+            @include padding-margin(8% 0 0 0,0);
+            text-align: left;
+            img {
+                float: left;
+                display: inline-block;
+                @include padding-margin(0,0 4% 0 15%);
+            }
+            figcaption {
+                float: left;
+                display: inline-block;
+                width: 62%;
+            }
+        }
+        h3 {
+            font-family: 'san_francisco_displaybold';
+            color: #fff;
+            font-size: $h3-font-size;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        h4 {
+            color: #fff;
+            font-size: $h4-font-size;
+            @include padding-margin(0,0 0 1% 0);
+        }
+        p {
+            color: #949494;
+            font-size: $p-font-size;
+            line-height: normal;
+        }
+    }
+}
+#about-us {
+    @include bg-img-full('../img/bg_aboutus_desktop.jpg');
+    .fp-tableCell {
+        vertical-align: top;
+    }
+    .about-us-inner {
+        @include padding-margin(6% 0 0 0,0 auto);
+        height: 75%;
+        h2 {
+            text-transform: uppercase;
+            color: #282828;
+            font-size: $h2-font-size;
+            font-family: 'san_francisco_displaybold';
+            letter-spacing: 0.2em;
+            @include padding-margin(0 0 0.7% 0,0 auto);
+            max-width: 340px;
+        }
+        p {
+            font-size: $p-font-size;
+            font-family: 'san_francisco_displaymedium';
+            color: #282828;
+            line-height: normal;
+            max-width: 340px;
+            @include padding-margin(0,0 auto);
+            a {
+                font-family: 'san_francisco_displaybold';
+                color: #282828;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .lower {
+            @include padding-margin(1% 0 0 0,0);
+        }
+        .copyright {
+            position: absolute;
+            bottom: 0;
+            display: block;
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            width: 100%;
+            .cw-inner {
+                display: block;
+                width: 100%;
+                @include padding-margin(2% 0,0);
+            }
+            p {
+                font-size: $p-font-size;
+                font-family: 'san_francisco_displaymedium';
+                color: #fff;
+                line-height: normal;
+                max-width: 100%;
+            }
+            .img-responsive {
+                position: absolute;
+                right: 2%;
+                top: 36%;
+            }
+        }
+    }
+}
+#email-landing-section {
+    .email-landing-section-inner {
+        max-width:438px;
+        @include padding-margin(0,0 auto);
+    }
+    h2 {
+        @include padding-margin(0,0);
+        @include h2;
+        span {
+            display:block;
+        }
+    }
+    p {
+        font-size:$p-font-size;
+        font-family:'san_francisco_displaysemibold';
+        color:#fff;
+        line-height:normal;
+        width:100%;
+        @include padding-margin(12% 0 10% 0,0 auto);
+    }
+    .shred-icon-2 {
+        @include bg-img('../img/icon_shred_pg2.png')
+    }
+    .email-field {
+        float:left;
+    }
+    input {
+        width:258px;
+        height:50px;
+        @include padding-margin(0,0);
+        @include darkInput;
+    }
+    .signup {
+        float:right;
+        height:52px;
+        width:160px;
+        @include padding-margin(11px 0,1px 0 0 0);
+        @include redButton;
+    }
+    .active {
+        background-color: #b6072e;
+    }
+}
+// for small screens
+@media (max-width: 767px) {
+    .desktop-only {
+        display:none !important;
+    }
+    .mobile-only {
+        display:block !important;
+    }
+
+    #header {
+        @include padding-margin(0,0);
+        .fp-tableCell {
+            @include padding-margin(0,0);
+            vertical-align: middle;
+        }
+        h1 {
+            @include padding-margin(0,0 auto);
+        }
+        h2 {
+            width: 80%;
+            @include padding-margin(14% 0 15% 0,0 auto);
+        }
+        .links {
+            .app-store-link {
+                display: none;
+                height: 0;
+            }
+            .mac-app-store-link {
+                @include padding-margin(0,0 auto 4%);
+                display: block;
+                width: image-width('../img/badge_macstore_desktop.png');
+            }
+        }
+        .arrow {
+            a {
+                img {
+                    top: 130%;
+                }
+            }
+        }
+    }
+    #collage {
+        .box {
+            background: url("../img/letterbox_mobile.jpg") 0 0 no-repeat;
+            width: image-width('../img/letterbox_mobile.jpg')-20px;
+            height: image-height('../img/letterbox_mobile.jpg')-20px;
+            padding: 10px;
+            p {
+                display: inline;
+            }
+        }
+    }
+    #how-to {
+        .how-to-inner {
+            @include padding-margin(6% 0 18% 0,0);
+            .email-sign-up {
+                h4 {
+                    font-size: $h4-font-size;
+                    letter-spacing: normal;
+                }
+            }
+            figure {
+                text-align: center;
+                img {
+                    float: none;
+                    display: block;
+                    @include padding-margin(0,0 auto 2%);
+                }
+                figcaption {
+                    float: none;
+                }
+            }
+        }
+    }
+    #about-us {
+        .about-us-inner {
+            @include padding-margin(6% 0 0 0,0 auto);
+            h2 {
+                @include padding-margin(0 6% 2%,0);
+            }
+            p {
+                @include padding-margin(0 6%,0);
+            }
+            .lower {
+                @include padding-margin(4% 0 0 0,0);
+            }
+        }
+        .copyright {
+            .cw-inner {
+                .img-responsive {
+                    @include padding-margin(0 0 2%,0 auto);
+                    position: static;
+                }
+                p {
+                    @include padding-margin(0 2%,0);
+                    font-size: $small-font-size;
+                }
+            }
+        }
+    }
+    #email-landing-section {
+        .email-landing-section-inner {
+            @include padding-margin(0 6%,0);
+            .email-field {
+                float:none;
+                width:100%;
+                margin:0 auto 4%;
+                input {
+                    width:100%;
+                    height:44px;
+                    @include padding-margin(0,0 auto 5%);
+                }
+            }
+            .signup {
+                width:100%;
+                height:45px;
+                @include padding-margin(0,0 auto);
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers:
+ */
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

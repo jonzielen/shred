@@ -1,0 +1,64 @@
+@mixin fontFace($familyName, $fontFileName) {
+   font-family: $familyName;
+   src: url($font-path + $fontFileName + '.eot');
+   src: url($font-path + $fontFileName +'.eot?#iefix') format('embedded-opentype'),
+        url($font-path + $fontFileName +'.woff2') format('woff2'),
+        url($font-path + $fontFileName +'.woff') format('woff'),
+        url($font-path + $fontFileName +'.ttf') format('truetype'),
+        url($font-path + $fontFileName +'.svg#' + $familyName) format('svg');
+   font-weight:normal;
+   font-style:normal;
+}
+
+@mixin padding-margin($padding: 0, $margin: 0) {
+    padding:$padding;
+    margin:$margin;
+}
+
+@mixin bg-img($path) {
+    background:url($path) 0 0 no-repeat;
+    width: image-width($path);
+    height: image-height($path);
+    @include padding-margin(0,0 auto);
+}
+
+@mixin bg-img-full($path) {
+    background:url($path) 0 0 no-repeat;
+    background-position:center;
+    @include background-size(cover);
+    @include padding-margin(0,0);
+}
+
+@mixin h2($color:#fff) {
+    @include text-shadow(0 0 .75em rgba(0, 0, 0, 1));
+    color:$color;
+    font-family: 'san_francisco_displaybold';
+    font-size: $h2-font-size;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+@mixin redButton() {
+    display: block;
+    background-color: #181818;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-family: 'san_francisco_displaybold';
+    outline: none;
+    letter-spacing:0.6px;
+    @include transition-property(all);
+    @include transition-duration(0.25s);
+    @include transition-timing-function(ease);
+}
+
+@mixin darkInput() {
+    display: block;
+    border: 2px solid #696969;
+    background-color: #272727;
+    text-align: center;
+    font-size:$p-font-size;
+    color: #fff;
+    outline: none;
+    @include border-radius(0);
+}

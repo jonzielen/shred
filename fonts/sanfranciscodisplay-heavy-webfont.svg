@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
-<svg xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata></metadata>
 <defs>
 <font id="san_francisco_displayheavy" horiz-adv-x="1243" >
@@ -369,6 +369,10 @@
 <hkern u1="&#xd4;" u2="]" k="38" />
 <hkern u1="&#xd5;" u2="]" k="38" />
 <hkern u1="&#xd6;" u2="]" k="38" />
+<hkern g1="Thorn" 	g2="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	k="52" />
+<hkern g1="Thorn" 	g2="AE" 	k="119" />
+<hkern g1="Thorn" 	g2="parenright,bracketright,braceright" 	k="21" />
+<hkern g1="Thorn" 	g2="V" 	k="52" />
 <hkern g1="backslash" 	g2="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	k="-23" />
 <hkern g1="backslash" 	g2="V" 	k="46" />
 <hkern g1="backslash" 	g2="J" 	k="15" />
@@ -451,6 +455,36 @@
 <hkern g1="two" 	g2="V" 	k="8" />
 <hkern g1="two" 	g2="W" 	k="8" />
 <hkern g1="two" 	g2="comma,period,quotesinglbase,quotedblbase,ellipsis" 	k="-24" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	k="-31" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="J" 	k="-8" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="C,G,O,Q,Ccedilla,Ograve,Oacute,Ocircumflex,Otilde,Odieresis,OE" 	k="21" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="quoteleft,quotedblleft" 	k="70" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="quoteright,quotedblright" 	k="78" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="asterisk,registered" 	k="55" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="quotedbl,quotesingle,ordfeminine,degree,uni00B2,uni00B3,uni00B9,ordmasculine,trademark" 	k="58" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="T" 	k="89" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="V" 	k="81" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="W" 	k="59" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="X" 	k="-39" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="Y,Yacute,Ydieresis" 	k="114" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="Z" 	k="-15" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="a,agrave,aacute,acircumflex,atilde,adieresis,aring,ae" 	k="-10" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="i,l,igrave,iacute,icircumflex,idieresis" 	k="-3" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="m,n,p,r,ntilde" 	k="-10" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="comma,period,quotesinglbase,quotedblbase,ellipsis" 	k="-36" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="t" 	k="31" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="v,w" 	k="60" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="y,yacute,ydieresis" 	k="21" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="zero,six" 	k="15" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="backslash" 	k="31" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="colon" 	k="-11" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="j" 	k="-31" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="one" 	k="45" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="question" 	k="69" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="semicolon" 	k="-21" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="seven" 	k="13" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="slash" 	k="-8" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="three" 	k="8" />
 <hkern g1="B" 	g2="quoteleft,quotedblleft" 	k="5" />
 <hkern g1="B" 	g2="quoteright,quotedblright" 	k="8" />
 <hkern g1="B" 	g2="asterisk,registered" 	k="10" />

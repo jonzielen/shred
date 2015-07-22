@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
-<svg xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata></metadata>
 <defs>
 <font id="san_francisco_displaymedium" horiz-adv-x="1114" >
@@ -363,6 +363,10 @@
 <hkern u1="&#xd4;" u2="]" k="9" />
 <hkern u1="&#xd5;" u2="]" k="9" />
 <hkern u1="&#xd6;" u2="]" k="9" />
+<hkern g1="Thorn" 	g2="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	k="57" />
+<hkern g1="Thorn" 	g2="AE" 	k="118" />
+<hkern g1="Thorn" 	g2="parenright,bracketright,braceright" 	k="22" />
+<hkern g1="Thorn" 	g2="V" 	k="57" />
 <hkern g1="backslash" 	g2="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	k="-5" />
 <hkern g1="backslash" 	g2="V" 	k="11" />
 <hkern g1="backslash" 	g2="J" 	k="4" />
@@ -425,6 +429,34 @@
 <hkern g1="three" 	g2="X" 	k="4" />
 <hkern g1="three" 	g2="comma,period,quotesinglbase,quotedblbase,ellipsis" 	k="29" />
 <hkern g1="two" 	g2="comma,period,quotesinglbase,quotedblbase,ellipsis" 	k="-32" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	k="-34" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="J" 	k="-29" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="C,G,O,Q,Ccedilla,Ograve,Oacute,Ocircumflex,Otilde,Odieresis,OE" 	k="22" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="quoteleft,quotedblleft" 	k="70" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="quoteright,quotedblright" 	k="99" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="asterisk,registered" 	k="66" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="quotedbl,quotesingle,ordfeminine,degree,uni00B2,uni00B3,uni00B9,ordmasculine,trademark" 	k="103" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="T" 	k="113" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="V" 	k="109" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="W" 	k="56" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="X" 	k="-36" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="Y,Yacute,Ydieresis" 	k="126" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="Z" 	k="-4" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="a,agrave,aacute,acircumflex,atilde,adieresis,aring,ae" 	k="-12" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="i,l,igrave,iacute,icircumflex,idieresis" 	k="-10" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="m,n,p,r,ntilde" 	k="-12" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="comma,period,quotesinglbase,quotedblbase,ellipsis" 	k="-26" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="t" 	k="7" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="v,w" 	k="59" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="y,yacute,ydieresis" 	k="22" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="zero,six" 	k="4" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="backslash" 	k="7" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="colon" 	k="-39" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="j" 	k="-34" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="one" 	k="82" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="question" 	k="16" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="semicolon" 	k="-22" />
+<hkern g1="A,Agrave,Aacute,Acircumflex,Atilde,Adieresis,Aring" 	g2="seven" 	k="21" />
 <hkern g1="B" 	g2="quoteleft,quotedblleft" 	k="19" />
 <hkern g1="B" 	g2="quoteright,quotedblright" 	k="29" />
 <hkern g1="B" 	g2="asterisk,registered" 	k="12" />
