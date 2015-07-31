@@ -8,56 +8,7 @@ $(function() {
         $("video.bk-video").hide();
     }
 
-    // full page init
-    $('#fullpage').fullpage({
-        scrollOverflow: true,
-        afterRender: function() {
-            setTimeout(function() {
-                $(window).resize();
-            });
-        },
-        afterLoad: function(anchorLink, index) {
-            if ((1 == index) && !isMobile && $('video').length > 0) {
-                $("video.bk-video").get(0).play();
-            }
-        }
-    });
-
-    // scroll links
-    $('.arrow').on('click', 'a', function(e) {
-        e.preventDefault();
-        if (isMobile) {
-            $.fn.fullpage.moveTo('slide3');
-        }
-        else
-        {
-            $.fn.fullpage.moveTo('slide2');   
-        }
-    })
-
-    $('.arrow2').on('click', 'a', function(e) {
-        e.preventDefault();
-        if (isMobile) {
-            $.fn.fullpage.moveTo('slide5');
-        }
-        else
-        {
-            $.fn.fullpage.moveTo('slide3');
-        }
-    })
-
-    // mac app store link
-    // $('#homepage .links').on('click', '.mac-app-store-link', function(e) {
-    //     e.preventDefault();
-    //     $.fn.fullpage.moveTo('slide3');
-    // });
-
-    // $('#email-landing .links').on('click', '.mac-app-store-link', function(e) {
-    //     console.log('clicked');
-    //     e.preventDefault();
-    //     $.fn.fullpage.moveTo('slide2');
-    // });
-
+    // add active class to email button when user is entering text in input
     function checkInput(email) {
         if (email == '') {
             $('#mc-embedded-subscribe-form button').removeClass('active');
@@ -69,4 +20,30 @@ $(function() {
     $('#mc-embedded-subscribe-form').on('keyup', '#mce-EMAIL', function() {
         checkInput(this.value);
     });
+
+    // on resize set visable sections to full screen
+    //$(window).resize(setWidthHeight());
+
+    // init set visable sections to full screen
+    setWidthHeight();
+
+    function setWidthHeight() {
+        var curWinHeight = $(window).height();
+
+        $('.section').each(function(index, element) {
+
+
+            console.log(index+': '+$(element).height());
+
+            if ($(element).height() > 0) {
+                $(element).height(curWinHeight);
+            }
+        });
+
+        //var curWinWidth  = $(window).width();
+
+
+        // console.log(curWinHeight);
+        // console.log(curWinWidth);
+    }
 });
