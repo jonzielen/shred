@@ -22,7 +22,26 @@ $(function() {
     });
 
     // on resize set visable sections to full screen
-    //$(window).resize(setWidthHeight());
+    $(window).on('resize', function() {
+        setWidthHeight();
+    });
+
+    // arrow scrollTo
+    $("#arrow1").click(function(e) {
+        e.preventDefault();
+
+        var visibleSection = [];
+        $('section').each(function(i, element) {
+            if ($(element).height() > 0 && i != 0) {
+                var elementId = element;
+                visibleSection.push($(elementId).attr('id'));
+            }
+        });
+
+        $('html, body').animate({
+            scrollTop: $('#'+visibleSection[0]).offset().top
+        }, 500);
+    });
 
     // init set visable sections to full screen
     setWidthHeight();
@@ -30,15 +49,11 @@ $(function() {
     function setWidthHeight() {
         var viewHeight = $(window).height();
 
-        $('.section').each(function(index, element) {
-
-            console.log(index+': '+$(element).height());
-
+        $('.section').each(function(i, element) {
             if ($(element).height() > 0) {
                 $(element).css({
                     minHeight: viewHeight
                 });
-                //$(element).height(curWinHeight);
             }
         });
     }

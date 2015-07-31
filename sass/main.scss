@@ -158,6 +158,7 @@ body {
     .section-inner {
         vertical-align:middle;
         width:100%;
+        display:table-cell;
     }
 }
 .desktop-only {
@@ -219,6 +220,7 @@ body {
     h2 {
         @include padding-margin(14% 0 0 0,0);
         @include h2;
+        text-align: center;
     }
     h3 {
         color: #fff;
@@ -227,7 +229,8 @@ body {
         font-size: 1.2em;
         letter-spacing: 3px;
         @include text-shadow(0 0 .75em rgba(0, 0, 0, 1));
-        @include padding-margin(0% 0 15% 0,0 auto);
+        @include padding-margin(0,0 auto);
+        text-align: center;
     }
     .links {
         max-width: 385px;
@@ -248,7 +251,7 @@ body {
         @include padding-margin(0,0 auto);
         width: 100%;
         position: absolute;
-        bottom: 4%;
+        bottom: 0;
         .arrow-inner {
             width: image-width('../img/arrow_down.png');
             height: image-height('../img/arrow_down.png');
@@ -378,8 +381,8 @@ body {
 #about-us {
     @include bg-img-full('../img/bg_aboutus_desktop.jpg');
     position: relative;
-    .fp-tableCell {
-        vertical-align: top;
+    .section .section-inner {
+        display:block;
     }
     .about-us-inner {
         @include padding-margin(6% 0 0 0,0 auto);
@@ -481,6 +484,9 @@ body {
 
 /* Email Landing Page */
 #email-landing-section {
+    .section-inner {
+        display:table-cell;
+    }
     .email-landing-section-inner {
         max-width: 438px;
         @include padding-margin(0,0 auto);
@@ -526,9 +532,6 @@ body {
 
 // for small screens
 @media (max-width: 767px) {
-    .section-inner {
-        display:table-cell;
-    }
     .desktop-only {
         display:none !important;
     }
@@ -537,10 +540,10 @@ body {
     }
     #header {
         @include padding-margin(0,0);
-        .fp-tableCell {
-            @include padding-margin(0,0);
-            vertical-align: middle;
-        }
+        // .fp-tableCell {
+        //     @include padding-margin(0,0);
+        //     vertical-align: middle;
+        // }
         h1 {
             @include padding-margin(0,0 auto);
         }
@@ -639,6 +642,7 @@ body {
     #email-landing-section {
         .email-landing-section-inner {
             width:88%;
+            max-width:88%;
             @include padding-margin(0 6%,0);
             .email-field {
                 float:none;
