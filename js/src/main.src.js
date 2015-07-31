@@ -28,22 +28,18 @@ $(function() {
     setWidthHeight();
 
     function setWidthHeight() {
-        var curWinHeight = $(window).height();
+        var viewHeight = $(window).height();
 
         $('.section').each(function(index, element) {
-
 
             console.log(index+': '+$(element).height());
 
             if ($(element).height() > 0) {
-                $(element).height(curWinHeight);
+                $(element).css({
+                    minHeight: viewHeight
+                });
+                //$(element).height(curWinHeight);
             }
         });
-
-        //var curWinWidth  = $(window).width();
-
-
-        // console.log(curWinHeight);
-        // console.log(curWinWidth);
     }
 });
